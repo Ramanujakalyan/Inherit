@@ -1,0 +1,21 @@
+import cv2.cv as cv
+
+feed = cv.CaptureFromCAM(0)
+frame = cv.QueryFrame(feed)
+moving_average = cv.CreateImage(cv.GetSize(frame),32,3) # image to store running avg
+avg_show = cv.CreateImage(cv.GetSize(frame),8,3) # image to show running avg
+
+def loop():
+    frame = cv.QueryFrame(feed)
+    c = cv.WaitKey(10)
+
+    cv.RunningAvg(frame, moving_average, 0.1, None)
+    cv.ConvertScaleAbs(moving_average,avg_show) # converting back to 8-bit to show
+
+    cv.ShowImage('live', frame)
+    cv.ShowImage('avg',avg_show)
+
+while True:
+    loop()
+
+cv.DestroyAllWindows()
