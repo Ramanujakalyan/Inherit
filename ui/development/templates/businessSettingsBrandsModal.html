@@ -1,0 +1,18 @@
+<ion-modal-view>
+    <div class="bar bar-header action-bar-gradient item-input-inset"><img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="">
+  
+  <h1 class="title">Brands</h1>
+  <button class="button" ng-click="doneSelectedBrand()">Done</button>
+</div>
+    <ion-content class="has-header">
+    	
+<ion-checkbox>Others</ion-checkbox>
+<ion-checkbox ng-repeat="brands in selBrands"
+                      ng-model="brands.checked" 
+                      ng-value="brands.brandName">
+          {{ brands.brandName}}
+        </ion-checkbox>
+
+  
+    </ion-content>
+  </ion-modal-view>

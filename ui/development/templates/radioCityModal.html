@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <div class="bar bar-header action-bar-gradient item-input-inset"><img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="">
+  
+  <h1 class="title">LOCATION</h1>
+  <button class="button" ng-click="doneLocation()">Done</button>
+</div>
+    <ion-content class="has-header">
+    	
+
+<ion-radio ng-repeat="location in locationList"
+                      ng-model="location.checked" 
+                      ng-checked="location.checked" ng-click = "clkCity()">
+          {{ location.city}}
+          <i class="{{category.cStyle}}"></i>
+        </ion-radio>
+
+  
+    </ion-content>
+  </ion-modal-view>

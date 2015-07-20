@@ -1,0 +1,4 @@
+<ion-view><style>
+.item-checkbox{padding-left:20px !important;}
+.checkbox{right:8px !important;left:85% !important;}
+</style><div class="bar bar-header item-input-inset actionBarCategory"><p class="selectCatHeading">Select Category</p></div><ion-content class="categorySelectionBg has-header"><ion-checkbox ng-repeat="category in categoryList" ng-model="category.checked" ng-checked="category.checked"><span class="categoryNameTxt">{{ category.cname}}</span> <i class="{{category.cStyle}}"></i></ion-checkbox><button class="continueWithSelection" ng-click="save()">Start exploring deals with selection</button></ion-content></ion-view>

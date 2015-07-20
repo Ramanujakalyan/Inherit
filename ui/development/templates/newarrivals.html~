@@ -1,0 +1,17 @@
+<div style="height: 200px; background-color: grey">
+<h4><center>New Arrivals</center></h4>
+<p>TODO : New Arrivals</p>
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div><h2><center>Image1</h2></center></div>
+    <p>Based on the New arrivals stock</p>
+  </ion-slide>
+  <ion-slide>
+    <div><h2><center>Image2</h2></center></div>
+    <p>Based on the New arrivals stock</p>
+  </ion-slide>
+  
+</ion-slide-box>
+
+</div>
+<hr style="width: 100%;"/>

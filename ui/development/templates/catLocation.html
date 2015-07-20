@@ -1,0 +1,43 @@
+<!-- <ion-view>
+<style>
+.item-checkbox{padding-left:20px !important;}
+.checkbox{right:8px !important;left:85% !important;}
+</style>
+<div class="bar bar-header item-input-inset actionBarCategory">
+<p class="selectCatHeading">Select Location</p>
+</div>
+<ion-content class="categorySelectionBg has-header categoryFilter">
+<div class="catFilterUl">
+<div ng-repeat="location in loc" class="categoryFilterMain" ui-sref="deals.localities({lid : location.lid})" >
+<p class="categoryFilterTxt">{{ location.city}}</p>
+</div>
+</div>
+<div class="clear"></div>
+<div super new></div>
+</ion-content>
+</ion-view>
+ -->
+
+<ion-view>
+   	<div class="bar bar-header item-input-inset actionBarCategory">
+		<p class="selectCatHeading">Select City</p>
+	</div>
+    <ion-content class="has-header has-footer">
+    	
+<div class="categoryFilerMain">
+	<div class="categoryFilterSingleMain" ng-repeat="location in loc" ui-sref="deals.catFilter" ng-click="getCatID()">
+		<div class="categorySingleImage">
+			<img ng-src="{{location.imageUrl}}" class="categorySingleImageImg" alt="" />
+		</div>
+		<div class="categoryFilterInfo">
+			<p class="categoryFilterTitleTxt">{{ location.city}}</p>
+			
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+    </ion-content>
+  </ion-view>
+ 
+
+

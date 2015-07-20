@@ -1,0 +1,44 @@
+<ion-view>
+	<ion-content>
+		<p class="manageDealsHeading" ng-show="favDealsList">Manage Deals</p>	
+		<div ng-show="hasFavDeals">
+		    <div class="favStoresMain">
+				<div class="noFavStoreFound">
+				    <div class="nofavStoreImage">
+						<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+				    </div>
+				    <p class="noFavStoreHeading">You haven't posted any deals to manage!</p>
+				    <p class="noFavStoreTxt">Use Manage my deals to end a deal, change its duration or upgrading it to a premium spot.</p>
+				</div>
+				<button class="button button-block button-assertive" ui-sref="merch.postADeal">Post your first deal</button>
+		    </div>
+		</div>
+		<div class="earlierDealsMain" ng-show="favDealsList">
+			<div class="dealSingle" ng-repeat="manageDeal in manageDeals">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+					</div>
+					<div class="dealImageListing">
+						<img src="{{manageDeal.logoUrl}}" alt="" class="dealImgListing" />
+					</div>
+				</div>
+				<div class="dealListingDetails" ng-if="manageDeal.status == 'A' || manageDeal.status == 'I'">
+					<p class="dealTitleTxt">{{manageDeal.title}}</p>
+					<p ng-class="{'activeDeal':manageDeal.status == 'A'}" class="activeOrInactive" ng-click="checkActive()">Active</p>
+					<p ng-class="{'activeDeal':manageDeal.status == 'I'}" class="activeOrInactive" ng-click="checkInactive()">In Active</p>
+					<p class="upgraDealButton" ui-sref="merch.upgradeIntro">Upgrade</p>
+				</div>
+
+				<div class="dealListingDetails" ng-if="manageDeal.status == 'P'">
+					<p class="dealTitleTxt">{{manageDeal.title}}</p>
+					<p class="activeOrInactive" ng-click="checkActive()">Active</p>
+					<p class="activeOrInactive" ng-click="checkInactive()">In Active</p>
+					<p class="upgraDealButton" ui-sref="merch.upgradeIntro">Upgrade</p>
+				</div>
+
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

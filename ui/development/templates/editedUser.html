@@ -1,0 +1,28 @@
+
+<ion-view>
+  <ion-content class="has-footer">
+	  <button ng-click="userType1()" >SELECT USER TYPE</button>
+	  <input  type = "text" placeholder = "User Name" name ="userName" ng-model = "userName" ng-bind = "userName"/>
+	  <input  type = "email" placeholder = "someone@example.com" name ="email" ng-model = "email" ng-bind = "email"/>
+	  
+	  <p ng-click = "resetPassword()">click here to reset Password </p>
+	  
+	  <button ng-click="showCity()" >select City</button>
+	  <button ng-click="showLocality()" >Select Location</button>
+	  <p>{{myName}}</p>
+	  <div ng-show = "showBiz">
+	  <ion-radio ng-repeat="business in businessList"
+                      
+                      ng-checked="business.checked" ng-value = "business.checked" ng-click = "selectStore()">
+          {{ business.address}}
+          <i class="{{category.cStyle}}"></i>
+        </ion-radio>
+		</div>
+	  
+	  
+	 
+	  <button ng-click="updateUser()" >UPDATE USER</button>
+	  <button ng-click="deleteUser()" >DELETE USER</button>
+ 
+  </ion-content>
+</ion-view>

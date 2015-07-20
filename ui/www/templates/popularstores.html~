@@ -1,0 +1,33 @@
+<ion-view>
+
+<ion-content>
+<style>
+
+.insta{
+  background:#ff0000;
+  width:200px;
+  height:80px;
+  margin-left: auto;
+  margin-right: 60%;
+ 
+}
+
+</style>
+
+<div class="Act">
+ <h1 align="center">Popular Stores</h1> 
+</div>
+
+
+
+
+ <div class="insta">
+<!--These are the Images of popular Items, which are bought by the user..this is based on Click counts. This is a horizantal Scroll -->
+</div>
+ 
+
+
+
+</ion-content>
+
+</ion-view>

@@ -1,0 +1,182 @@
+<style>
+#movingBallG{
+position:relative;
+width:256px;
+height:20px;
+}
+
+.movingBallLineG{
+position:absolute;
+left:0px;
+top:8px;
+height:4px;
+width:256px;
+background-color:#FFFFFF;
+}
+
+.movingBallG{
+background-color:#000000;
+position:absolute;
+top:0;
+left:0;
+width:20px;
+height:20px;
+-moz-border-radius:10px;
+-moz-animation-name:bounce_movingBallG;
+-moz-animation-duration:1.3s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-direction:normal;
+-webkit-border-radius:10px;
+-webkit-animation-name:bounce_movingBallG;
+-webkit-animation-duration:1.3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:normal;
+-ms-border-radius:10px;
+-ms-animation-name:bounce_movingBallG;
+-ms-animation-duration:1.3s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-direction:normal;
+-o-border-radius:10px;
+-o-animation-name:bounce_movingBallG;
+-o-animation-duration:1.3s;
+-o-animation-iteration-count:infinite;
+-o-animation-direction:normal;
+border-radius:10px;
+animation-name:bounce_movingBallG;
+animation-duration:1.3s;
+animation-iteration-count:infinite;
+animation-direction:normal;
+}
+
+@-moz-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:236px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-webkit-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:236px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-ms-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:236px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-o-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:236px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:236px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+</style>
+
+
+<ion-view>
+
+
+
+<ion-content>
+
+<div class="tabs-top tabCustomBar remove-tabs-top-spacing">
+		<div class="tabs">
+			  <a class="tab-item" ui-sref="deals.stores"">Stores</a>
+			  <a class="tab-item active">Offers</a>
+			  <a class="tab-item" ui-sref="deals.malls">Malls</a>
+	   </div>
+</div>
+
+
+
+<div ng-include src="'templates/offernearyou.html'"></div>
+
+	<div ng-include src="'templates/activityFeed.html'"></div>
+
+		<div ng-include src="'templates/flashDeals.html'"></div>
+
+
+			<div ng-include src="'templates/lunchoffer.html'"></div>
+
+				<div ng-include src="'templates/offerbundles.html'"></div>
+
+					<div ng-include src="'templates/fav.html'"></div>
+
+						<div ng-include src="'templates/cardDeals.html'"></div>
+
+							<div ng-include src="'templates/fav-brands.html'"></div>
+	
+								<!--div ng-include src="'templates/newarrivals.html'"></div-->
+
+							<!--div ng-include src="'templates/popularitems.html'"></div-->
+
+						<!--div ng-include src="'templates/youmightlike.html'"></div-->
+
+					<!--div ng-include src="'templates/greatbuys.html'"></div-->
+
+				<!--div ng-include src="'templates/popularstores.html'"></div-->
+
+			<!--div ng-include src="'templates/newstores.html'"></div-->
+
+
+		<!--div ng-include src="'templates/events.html'"></div-->
+
+	<!--div ng-include src="'templates/cardDeals.html'"></div-->
+
+
+</ion-content>
+
+</ion-view>

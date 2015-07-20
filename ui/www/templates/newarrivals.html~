@@ -1,0 +1,12 @@
+<ion-view><ion-content><style>
+
+.insta{
+  background:#ff0000;
+  width:200px;
+  height:550px;
+  margin-left: auto;
+  margin-right: 60%;
+ 
+}
+
+</style><div class="Act"><h1 align="center">New Arrivals</h1></div><div class="insta"></div></ion-content></ion-view>

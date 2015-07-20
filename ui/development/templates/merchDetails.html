@@ -1,0 +1,67 @@
+<style>
+.btnColor {
+	background: #ffc;
+}
+
+
+</style>
+<ion-view class="detailsPane">
+
+	<ion-content class="has-footer">
+		<div class="dealsDetailMain">
+			<div class="dealHeading">
+				<p class="dealHeadingTxt">{{dealData.title}}</p>
+			</div>
+			<div class="dealDetailImageContainer">
+				<div class="dealDetailImage">
+					<img src="{{dealData.imageUrl}}" class="dealDetailImg" alt="" />
+				</div>
+				<div class="storeDealDetails">
+					<div class="storeDealImage">
+						<img ng-src="{{dealData.logoUrl}}" ui-sref="merch.merchViewUser({store : dealData.businessId})" alt="" class="storeImgDeal" />
+					</div>
+					<div class="storeDetailsTxt">
+						<p class="storeNameDealTxt" ui-sref="deals.storeViewUser({store : dealData.businessId})">{{dealData.businessDescription}}</p>
+						<p class="storeDescriptionDealTxt" ui-sref="deals.mallView({mall : dealData.mallId})">{{dealData.mallName}}</p>
+					</div> 
+				</div>
+			</div>
+			<div class="dealMainDetailsContainer">
+				<div class="dealMainDetails">
+					<p class="dealMainDetailTxt">{{dealData.description}}</p>
+					<p class="dealValidity">Valid Till {{dealData.validTo | date:'MMM dd'}}</p>
+					<p class="dealCategory">{{dealData.catName}}</p>
+				</div>
+				<div class="dealDetailOptionsMain">
+					<div class="rowDealDeatilOptions">
+						<p class="colDealDeatilOptions optionSave" ng-click="saveDeal()" ng-if="!dealData.isSavedDeal"><i class="fa fa-heart saveDealOptionIcon"></i>Save</p>
+						<p class="colDealDeatilOptions optionSave btnColor" ng-if="dealData.isSavedDeal"><i class="fa fa-heart saveDealOptionIcon"></i>Saved</p>
+						<p class="colDealDeatilOptions optionShare" ng-click="popover.show($event)"><i class="fa fa-share-alt shareDealOptionIcon"></i>Share</p>
+						<p class="colDealDeatilOptions optionCheckin" ng-click="checkin()" ng-if="!dealData.isCheckedInDeal"><i class="fa fa-map-marker checkinDealOptionIcon"></i>Checkin</p>
+						<p class="colDealDeatilOptions optionCheckin btnColor" ng-if="dealData.isCheckedInDeal"><i class="fa fa-map-marker checkinDealOptionIcon"></i>Checked In</p>
+						<p class="colDealDeatilOptions optionPurchase" ng-click="purchased()" ng-if="!dealData.isPurchaseDeal"><i class="fa fa-thumbs-up purchaseDealOptionIcon"></i>Bought</p>
+						<p class="colDealDeatilOptions optionPurchase btnColor" ng-if="dealData.isPurchaseDeal"><i class="fa fa-thumbs-up purchaseDealOptionIcon"></i>Acquired</p>
+					</div>
+				</div>
+			</div>
+			<div class="dealContactDetails">
+				<div class="dealContactDetailsInner">
+				<div ng-if="dealData.businessAddress.length != 0">
+					<p class="dealContactHeading">Contact Details</p>
+					<p class="dealContactAddressTxt">{{dealData.businessAddress}}</p>
+					<p class="dealContactNumberTxt" >{{dealData.businessPhone}}</p>
+					<p class="dealContactMailIdTxt">{{dealData.businessEmail}}</p>
+				</div>	
+					<div class="callBusinessButton deal-detail-buttons">
+						<a class="callBusinessTxtA" ng-href="tel: {{dealData.businessPhone}}">Call Business</a>
+					</div>
+					<div class="viewBusinessButton" ng-click="Geolocalizar()">
+						<p class="callBusinessTxt">View in Map</p>
+					</div>
+				</div>
+			</div>
+			<p class="discalimerTxt1">Note: Madzz recommends Double Checking Deal Validity with the Business</p>
+		</div>
+	</ion-content>
+</ion-view>
+		

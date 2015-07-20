@@ -1,0 +1,3 @@
+<ion-view><style>
+	.slider-pager{display:block !important;bottom: 9px !important;}
+</style><ion-content class="has-footer loadingBg"><div ng-show="showDeals"><div ng-include="" src="'templates/carouselTemplate.html'"></div></div><div ng-show="showDeals"><div ng-include="" src="'templates/dealTemplate.html'"></div></div><div ng-show="noDeals"><div class="nofavStoreImage"><img src="images/couldntFindIcon.png" class="noFavStoreImg" alt=""></div><p class="noFavStoreTxt">There are no deals to display here. Please check back again soon. We add deals on a daily basis.</p></div><ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c"></ion-infinite-scroll></ion-content></ion-view>

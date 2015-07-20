@@ -1,0 +1,3 @@
+<ion-view><div class="tabs-top tabCustomBar remove-tabs-top-spacing"><div class="tabs"><a class="tab-item" ui-sref="deals.yourDeals">Recommended</a> <a class="tab-item active">Popular</a> <a class="tab-item" ui-sref="deals.dealsNearYou">Near Me</a></div></div><style>
+	.slider-pager{display:block !important;bottom: 9px !important;}
+</style><ion-content class="has-footer loadingBg"><div class="dealsCrsl"><div ng-include="" src="'templates/carouselTemplate.html'"></div></div><div ng-include="" src="'templates/dealTemplate.html'"></div><ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c"></ion-infinite-scroll></ion-content></ion-view>

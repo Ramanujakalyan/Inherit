@@ -1,0 +1,37 @@
+<ion-view>
+<style>
+.item-checkbox{padding-left:20px !important;}
+.checkbox{right:8px !important;left:85% !important;}
+.locBar{ background-color: #fff; vertical-align: text-top; padding: 10px;}
+.locName {line-height:40px;font-size: 1.3em;color: #c60309;width: 100%;}
+.line {width: 107%; position: relative; left: -4%;}
+</style>
+<div>
+	<div class="bar bar-header item-input-inset actionBarCategory">
+		<p class="selectCatHeading">Select Category</p>
+	</div>
+	<ion-content class="has-header has-footer">
+		<!--<div class="locBar">
+			<div ng-repeat="category in categoryList" class="categoryFilterMain" ui-sref="deals.dealFilter({cid : category.cid})" style="border-bottom: ridge;">
+				<i class="{{category.cStyle}}"></i> <p class="locName">{{ category.cname}}</p>
+				
+			</div>
+			<div class="clear"></div>
+		</div>-->
+		<div class="categoryFilerMain">
+			<div class="categoryFilterSingleMain" ng-repeat="category in categoryList" ui-sref="deals.dealFilter({cid : category.cid})">
+				<div class="categorySingleImage">
+					<img ng-src="{{category.imageUrl}}" class="categorySingleImageImg" alt="" />
+				</div>
+				<div class="categoryFilterInfo">
+					<p class="categoryFilterTitleTxt">{{ category.cname}}</p>
+				
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</ion-content>
+</div>
+</ion-view>
+
+

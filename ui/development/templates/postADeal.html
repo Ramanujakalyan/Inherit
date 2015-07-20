@@ -1,0 +1,162 @@
+<style>
+	.button1{width: 100%;height: 100%;float: left;opacity: 0.001;}
+	.buttontext {    
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+</style>
+<ion-view>
+  
+  <ion-content class="has-footer">
+   <div class="postAdealMain">
+    <div class="postAdealHeading">
+      <p class="postAdealTxt">Post a Deal</p>
+    </div>
+    
+    <form novalidate name="dealVld" ng-init="titleBlur=false;descBlur=false">
+      <div class="postAdealMainBlock">
+        <div class="universalFormMain">
+          <div class="formStep">
+            <div class="textBoxForm">
+              <div class="textBoxIcon">
+                <i class="fa fa-tag customUserNameIconReg"></i>
+              </div>
+              <div class="textBoxHolder">
+                <input required type="text" class="textBoxInput" ng-blur="titleBlur=true" placeholder="Enter Deal Title" name="title" ng-model="dealForm.title"/>
+                <b class="tooltip tooltip-bottom-right black">E.g. Flat 40% Off on Shoes and Garments or Buy 1 Get 1 20% Off</b>
+                 
+              </div>
+            </div>
+            <p ng-show="titleBlur && dealVld.title.$error.required" class="help-block">Deal title is required.</p>
+          </div>
+          <div class="formStep">
+            <div class="textAreaForm">
+              <div class="textAreaIcon">
+                <i class="fa fa-pencil customPhoneNumIconReg"></i>
+              </div>
+              <div class="textAreaHolder">
+                <textarea required type="text" class="textAreaInput" placeholder="Enter Deal Description" name="description" ng-model="dealForm.description" ng-minlength="10" ng-maxlength="500" ng-blur="descBlur=true" ></textarea>
+                <b class="tooltip tooltip-bottom-right black">Grand Festival Sale. Buy 1 Get 1 20% Off on all Men’s Clothing, Women’s Wear and also on Winter Wear</b>
+                
+              </div>
+            </div>
+            <p class="help-block" ng-show="descBlur && dealVld.description.$error.minlength || descBlur && dealForm.description.$error.required">Too short! Should be greater than 10 characters.</p>
+                <p class="help-block" ng-show="descBlur && dealVld.description.$error.maxlength">Too long! Should be less than 500 characters.</p>
+          </div>
+          
+          <div class="formStep">
+            <div class="textBoxForm">
+              <div class="textBoxIcon">
+                <i class="fa fa-sitemap customPhoneNumIconReg">
+                </i>
+              </div>
+              <div class="textBoxHolder">
+                <!-- <input type="text" class="textBoxInput" placeholder="Select your categories" ng-click="modal.show()"> -->
+                <button class="textBoxInput leftAlign" ng-click="dealModal.show()">{{dealButton}}</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="formStep">
+            <div class="textBoxForm">
+              <div class="textBoxIcon">
+                <i class="fa fa-sitemap customPhoneNumIconReg"></i>
+              </div>
+              <div class="textBoxHolder">
+                <button class="textBoxInput leftAlign" ng-click="selectedCatModal.show()"><span class="buttontext">{{catButton}}</span></button>
+ 
+              </div>
+            </div>
+                            <p ng-show="hasSelectedCat" class="help-block">Select at least 1 category.</p>
+          </div>
+          <div class="formStep">
+            <div class="textBoxForm"> 
+              <div class="textBoxIcon">
+                <i class="fa fa-star-o customPhoneNumIconReg"></i>
+              </div>
+              <div class="textBoxHolder">
+                <button class="textBoxInput leftAlign" ng-click="showBrandModal()"><span class="buttontext">{{brandButton}}</span></button>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="formStep">
+          <div class="textBoxForm noBg noShadow">
+            <div class="halfWidthSpotDeal fleft">
+              <div class="textBoxIcon">
+                <i class="fa fa-clock-o customPhoneNumIconReg"></i>
+              </div>
+              <div class="textBoxHolderHalf">
+                <button class="textBoxInput" ng-click="fromDate()">{{viewFromDate}}</button>
+              </div>
+            </div>
+            <div class="halfWidthSpotDeal fright">
+              <div class="textBoxIcon">
+                <i class="fa fa-clock-o customPhoneNumIconReg"></i>
+              </div>
+              <div class="textBoxHolderHalf">
+                <button class="textBoxInput" ng-click="toDate()">{{viewToDate}}</button>
+              </div>
+            </div>
+          </div>
+          <p ng-show="valDate" class="help-block">From Date Cannot Be Greater Than To Date</p>
+        </div>
+
+          <!--<span s3-upload bucket="'madzz-dev-bucket'" ng-model="files.first"
+                 s3-upload-options="{getOptionsUri: 'http://madzztest1-env.elasticbeanstalk.com/rest/awsS3AuthAccess'}"  ></span>
+          <div class="formStep">
+            <div class="addPhotoOrTakeContainer">
+              <div class="addPhotoOrTakeInner">
+
+                <div class="addPhotoPostDeal" ng-click="goAddPhoto()">
+                
+                    <img ng-src="{{chosenImage}}" width="120" height="120">
+                    <div class="addPhotoPostDealInner " style="margin-top:-115px">
+						<i class="fa fa-photo customAddPhotoIcon"></i>
+						<p class="addOrTakePhotoTxt">Add Photo</p>
+                    </div>
+                </div>
+                
+                <p class="addOrTake">Or</p>
+                
+                <div class="takePhotoPostDeal" ng-click="goTakePhoto()"> 
+                  <div class="takePhotoPostDealInner">
+                    <i class="fa fa-camera customTakePhotoIcon"></i>
+                    <p class="addOrTakePhotoTxt">Take Photos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+          
+         <!-- <div class="formStep">
+            <div class="addPhotoOrTakeContainer">
+              <div class="addPhotoOrTakeInner">
+
+                <div class="addPhotoPostDeal">
+			<span class="s3uploadButton" s3-upload bucket="'madzz-dev-bucket'" ng-model="files.first" s3-upload-options="{getOptionsUri: 'http://madzztest1-env.elasticbeanstalk.com/rest/awsS3AuthAccess'}"  ></span>
+	    		<img ng-src="{{files.first}}" width="120" height="120">
+	    		<div class="addPhotoPostDealInner " style="margin-top:-115px">
+				<i class="fa fa-photo customAddPhotoIcon"></i>
+				<p class="addOrTakePhotoTxt">Add Photo</p>
+	    		</div>
+               
+              </div>
+            </div>
+          </div>-->
+          
+          <div class="formStep">
+            <input type="button" class="buttonForm fright" value="Submit" ng-click="submitDeal(dealForm, dealVld.$valid)"/>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  </ion-content>
+</ion-view>

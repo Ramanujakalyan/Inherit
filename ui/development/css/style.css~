@@ -1,0 +1,3975 @@
+@font-face {
+    font-family: 'gothic';
+    src: url('../fonts/gothic.eot');
+    src: local('gothic'), url('../fonts/gothic.woff') format('woff'), url('../fonts/gothic.ttf') format('truetype');
+}
+.s3uploadButton{position:relative !important;}
+.addPhotoPostDeal img{position:absolute;top:0px;left:0px;z-index:1;}
+.s3uploadButton input[type="file"]{position:absolute;top:0px;left:0px;width:100%;height:100%;}
+.markerDealTitle{width:75%;float:left;font-weight:bold !important;color:#c60309 !important;font-size:1em !important;margin-bottom:1px !important;}
+.markerDealBrand{width:75%;float:left;color:#222 !important;font-size:1em !important;}
+.help-block{color: #fff !important;width: 100% !important;text-align: center !important;float: left !important;margin-top: 5px !important;margin-bottom: -10px !important;}
+.selectButtonMain{width:100%;height:60px;background:#6E0000;float:left;z-index:999;position:fixed;bottom:42px;left:0px;}
+./*loadingBg{background:#fff;}*/
+.dealForm{width:70%;}
+.marginButton{margin-left: 10.67px !important;}
+.categoryNameTxt{line-height:40px;}
+/*
+.checkbox-icon{background:#c60309;border-color:#c60309;}*/
+.checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{background: #000;
+border-color: #000;}
+.checkbox .checkbox-icon:before, .checkbox input:before{border-color: #909090;}
+.bar .title{color:#fff;font-size:1.3em;font-family:gothic;width:100%;text-align:center;background:none;}
+
+.spotAdealBg{background:#55509d;}
+.spotAdealIconCustom{background:#fff;font-size:6em !important;color:#55509d;text-shadow:inset 2px 0px 3px rgba(0,0,0,0.5);padding:25px;border-radius:50%;position:relative;left:50%;margin:25% 0px 0px -65px;}
+.spotAdealButton{position:fixed;bottom:105px;background:#fff;color:#55509d;padding:6px 0px;border-radius:5px;left:15px;font-weight:600;right:15px;text-align:center;}
+.spotAdealButton1{background:#fff;color:#55509d;padding:6px 0px;border-radius:5px;font-weight:600;text-align:center;float:left;width:96%;margin:0px 2%;}
+
+.noBg{background:none !important;}
+.refreshToConnect{position: absolute;top: 41px;z-index: 9;width: 100%;text-align: center;padding: 7px 0px;background: rgba(0,0,0,0.8);color: #fff;font-size: 1.2em;}
+.refreshMain{position: absolute;top: 35px;width: 100%;z-index: 99;}
+.scroll-refresher{top:-20px !important;}
+.flaticon-whatsapp{float: left;left: -4px;position: absolute;}
+/**/
+.searchResultHeading{font-size: 1.2em;background:#fff !important;color: #c60309;padding:15px 10px 10px !important;text-align: center;font-weight: bold;text-shadow: 0px 0px 1px rgba(0,0,0,0.3);font-family: gothic;}
+.button {
+    line-height: 32px !important;
+}
+.noThanksButtonIntro{color:#c60309 !important;font-family:gothic;font-weight:600 !important;font-size:1em !important;}
+
+.slider-pager {
+    display: none;
+}
+
+.tabs-striped .tab-item.tab-item-active{
+    border-color: #fff !important;
+}
+
+* {
+    font-family: gothic;
+}
+
+.ion-google-place-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+}
+
+input.ion-google-place[readonly] {
+    background-color: transparent;
+    cursor: text;
+}
+
+.dealsCrsl .slider-slides {
+    margin-top: 40px !important;
+    margin-bottom: -5px;
+}
+
+p {
+    font-family: gothic !important;
+}
+
+.noMargin {
+    margin: 0px !important;
+}
+
+.fleft {
+    float: left !important;
+}
+
+.fright {
+    float: right !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+.static {
+    position: static !important;
+}
+
+::-webkit-input-placeholder {
+    color: #c60309 !important;
+}
+
+:-moz-placeholder {
+ /* Firefox 18- */
+    color: #c60309 !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+    color: #c60309 !important;
+}
+
+:-ms-input-placeholder {
+    color: #c60309 !important;
+}
+
+.greyBackground {
+    background: #e8e8e8;
+}
+
+button {
+    font-family: gothic;
+    border: none !important;
+}
+
+.remove-tabs-top-spacing .tabs {
+    top: 0 !important;
+}
+
+.button-assertive {
+    background: #c30409 !important;
+}
+
+.slider-images {
+    width: 100% !important;
+}
+
+.leftAlign {
+    text-align: left !important;
+}
+
+.tabs{
+    height: 51px;
+}
+/*
+ * Deals Page 
+*/
+.action-bar-gradient {
+    background: rgba(199,10,16,1);
+    background: -moz-linear-gradient(top, rgba(199,10,16,1) 0%, rgba(185,9,12,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,10,16,1)), color-stop(100%, rgba(185,9,12,1)));
+    background: -webkit-linear-gradient(top, rgba(199,10,16,1) 0%, rgba(185,9,12,1) 100%);
+    background: -o-linear-gradient(top, rgba(199,10,16,1) 0%, rgba(185,9,12,1) 100%);
+    background: -ms-linear-gradient(top, rgba(199,10,16,1) 0%, rgba(185,9,12,1) 100%);
+    background: linear-gradient(to bottom, rgba(199,10,16,1) 0%, rgba(185,9,12,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c70a10', endColorstr='#b9090c', GradientType=0 );
+}
+
+.bottom-bar {
+    background: #443f3f;
+ /* Old browsers */
+    background: -moz-linear-gradient(top,  #443f3f 0%, #443f3f 27%, #222222 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#443f3f), color-stop(27%,#443f3f), color-stop(100%,#222222));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #443f3f 0%,#443f3f 27%,#222222 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #443f3f 0%,#443f3f 27%,#222222 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #443f3f 0%,#443f3f 27%,#222222 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  #443f3f 0%,#443f3f 27%,#222222 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#443f3f', endColorstr='#222222',GradientType=0 );
+ /* IE6-9 */
+    ;
+}
+
+.item h2 {
+    font-family: gothic;
+    color: white;
+}
+
+.item p {
+    color: white;
+}
+
+.header-bar-icons {
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.signInIconActionBar {
+    margin: 2px 0px 0px 3px !important;
+}
+
+.action-bar-settings-icon {
+    padding-right: 0 !important;
+}
+
+.actionBarLogoHdpi {
+    width: 42px;
+    height: 42px;
+    margin: 9px 0 0 -3px;
+	position: relative;
+	z-index: 9999;
+}
+
+.actionBarLogoHdpi1 {
+    width: 42px;
+    height: 42px;
+    margin: 9px 0 0 -3px;
+	position: relative;
+	z-index: 9999;
+}
+
+.headerBarLabel {
+    background: #fff;
+    padding: 5px 5px !important;
+}
+
+.inputBar {
+    background: #fff !important;
+    padding: 0px !important;
+    border-right: 1px solid #c30409 !important;
+    height: 20px !important;
+    color: #c30409 !important;
+}
+
+.inputSearchIcon {
+    color: #c30409 !important;
+    padding: 0 6px 0 9px !important;
+}
+
+::-webkit-input-placeholder {
+    color: #c60309 !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #c60309 !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #c60309 !important;
+}
+
+:-ms-input-placeholder {
+    color: #c60309 !important;
+}
+
+.greyBackground {
+    background: #e8e8e8;
+}
+
+.slider-pager span i {
+    color: white;
+}
+
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+}
+
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+.deals-list-icon {
+    float: right;
+    font-size: 16px !important;
+    color: white;
+}
+
+.item-avatar {
+    padding-left: 0 !important;
+    min-height: 0 !important;
+}
+
+.dealSingle {
+    padding: 10px 0 5px 0 !important;
+}
+
+.noPadding {
+    padding: 7px 42px 5px 0px !important;
+}
+.brandPadding {
+    padding: 7px 10px 5px 0px !important;
+}
+
+.dealImageNShadow {
+    width: 110px;
+    height: 85px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+
+.dealImageListing {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
+}
+
+.dealImgListing {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.dealShadowListing {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    z-index: 0;
+}
+
+.dealListingDetails {
+    float: right;
+    width: 80%;
+}
+
+.dealTitleTxt {
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px 
+rgba(0,0,0,0.4);
+    font-family: gothic;
+    margin-bottom: 10px;
+    text-overflow: ellipsis !important;
+	width:100% !important;
+	overflow:hidden;
+	height:20px;
+}
+
+.dealStoreTxt {
+    float: left;
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+}
+
+.dealLocationTxt {
+    float: right;
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+}
+
+.redBg {
+    background-color: #c60309 !important;
+    background: #c60309 !important;
+    border: 1px solid #c60309 !important;
+}
+
+.lightRedBg {
+    background-color: #dc0910 !important;
+    background: #dc0910 !important;
+    border: 1px solid #dc0910 !important;
+}
+
+.accordioItemMain {
+    width: 87% !important;
+    float: right;
+    padding: 0px !important;
+}
+
+.viewDealButtonContainer {
+    width: 100%;
+    float: left;
+    margin: 5px 0px;
+}
+
+.dealListingDetails1 {
+    width: 100%float:left;
+}
+
+.viewDealButton {
+    float: left;
+    padding: 1px 8px !important;
+    border: 1px solid #fff !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    font-size: 0.8em !important;
+    line-height: 22px !important;
+}
+
+.accordionLineHeight {
+    line-height: 23px !important;
+}
+
+.dealListingArrow {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    top: 33px;
+}
+
+@media (max-width: 600px) {
+    .dealImageNShadow {
+        width: 75px;
+        height: 55px;
+    }
+
+    .dealImageListing {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dealShadowImg {
+        width: 85px;
+        height: 62px;
+        float: left;
+    }
+
+    .dealShadowListing {
+        position: absolute;
+        top: 1px;
+        left: 3px;
+        z-index: 0;
+    }
+
+    .dealTitleTxt {
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+    }
+
+    .dealStoreTxt {
+        font-size: 0.8em;
+    }
+
+    .dealLocationTxt {
+        font-size: 0.8em;
+    }
+
+    .dealListingDetails {
+        width: 75%;
+    }
+
+    .accordioItemMain {
+        width: 70% !important;
+    }
+}
+
+/*
+ * Deals Details page
+*/
+
+.detailsPane{
+    background: #c60309;
+}
+
+.no-height-pad {
+    padding: 0 5px 0 5px !important;
+}
+
+.deal-detail-buttons {
+    color: #c30409 !important;
+}
+
+.dealsDetailMain {
+    width: 100%;
+    position: relative;
+    background: #c60309;
+}
+
+.dealHeading {
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    background: #fff;
+}
+
+.dealHeadingTxt {
+    font-size: 1.2em;
+    color: #c60309;
+    padding: 0px !important;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.3);
+    font-family: gothic;
+}
+
+.dealDetailImageContainer {
+    width: 100%;
+    float: left;
+    height: 180px;
+    float: left;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.dealDetailImage {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.dealDetailImg {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.storeDealDetails {
+    position: absolute;
+    width: 100%;
+    float: left;
+    padding: 60px 0px 0px 0px;
+    bottom: 0px;
+    left: 0px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(33,33,33,1) 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(33,33,33,1)));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(33,33,33,1) 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(33,33,33,1) 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(33,33,33,1) 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(33,33,33,1) 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#212121',GradientType=0 );
+ /* IE6-9 */
+    ;
+}
+
+.storeDealImage {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 3px 10px 10px 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+}
+
+.storeImgDeal {
+    width: 100%;
+    height: 100%;
+}
+
+.storeDetailsTxt {
+    width: 75%;
+    float: left;
+}
+
+.storeNameDealTxt {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+    font-family: gothic;
+	margin-bottom: 7px;
+}
+
+.storeDescriptionDealTxt {
+    font-size: 1.1em;
+    color: #fff;
+    line-height: 16px !important;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+    font-family: gothic;
+}
+
+.dealMainDetailsContainer {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.dealMainDetails {
+    width: 100%;
+    float: left;
+}
+
+.dealMainDetailTxt {
+    font-size: 1em;
+    color: #fff;
+    font-family: gothic;
+    text-align: justify;
+    line-height: 24px !important;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.9);
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.dealValidity {
+    font-size: 1em;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.9);
+    float: left;
+    font-family: gothic;
+}
+
+.dealCategory {
+    font-size: 1em;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.9);
+    float: right;
+    font-family: gothic;
+}
+
+.dealContactDetails {
+    padding: 0px 15px;
+    width: 100%;
+    float: left;
+}
+
+
+
+
+.dealContactDetailsInner {
+    width: 100%;
+    float: left;
+    -webkit-box-shadow: inset 0px 0px 3px 1px rgba(121,0,4,1);
+    background: #a70005;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    -moz-box-shadow: inset 0px 0px 3px 1px rgba(121,0,4,1);
+    box-shadow: inset 0px 0px 3px 1px rgba(121,0,4,1);
+}
+
+.dealContactHeading {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: gothic;
+    font-size: 1.2em;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.7);
+}
+
+.dealContactAddressTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-family: gothic;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+.dealContactNumberTxt {
+    float: left;
+    color: #fff;
+    font-family: gothic;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.7);
+	width:100%;
+}
+
+.dealContactMailIdTxt {
+    float: right;
+    color: #fff;
+    font-family: gothic;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.7);
+}
+
+.mapViewHeading{color:#fff;font-family:gothic;font-size: 1.3em;font-weight: 600;}
+
+.callBusinessButton{width:47%;float:left;padding:3px 0px;border-radius:3px;background:#fff;margin:10px 0px 5px;}
+.viewBusinessButton{width:47%;float:right;padding:3px 0px;border-radius:3px;background:#fff;margin:10px 0px 5px;}
+.callBusinessTxt{font-family:gothic;color:#c60309;font-size:1em;text-align:center;font-weight:600;}
+.callBusinessTxtA{font-family:gothic;color:#c60309;font-size:1em;text-align:center;font-weight:600;width:100%;float:left;text-decoration:none;}
+
+.dealDetailOptionsMain{float:left;width:100%;}
+.rowDealDeatilOptions{width:100%;float:left;margin-top:15px;}
+.colDealDeatilOptions{width:48%;padding:6px 10px;float:left;background:#fff;border-radius:3px;color:#c60309;font-size:1em;text-shadow:0px 0px 0px rgba(0,0,0,0.4);}
+.optionSave{margin-bottom:10px;float:left;font-weight: lighter;}
+.optionShare{margin-bottom:10px;float:right;font-weight: lighter;}
+.optionCheckin{margin-bottom:10px;float:left;font-weight: lighter;}
+.optionPurchase{margin-bottom:10px;float:right;font-weight: lighter;}
+.saveDealOptionIcon{font-size:1.3em !important;padding-right: 10px;text-shadow:0px 0px 0px rgba(0,0,0,0.4);}
+.shareDealOptionIcon{font-size:1.3em !important;padding-right: 10px;text-shadow:0px 0px 0px rgba(0,0,0,0.4);}
+.checkinDealOptionIcon{font-size:1.3em !important;padding-right: 10px;text-shadow:0px 0px 0px rgba(0,0,0,0.4);margin-left:5px;}
+.purchaseDealOptionIcon{font-size:1.3em !important;padding-right: 10px;text-shadow:0px 0px 0px rgba(0,0,0,0.4);}
+.backButtonMapView{padding:4px 8px;color:#c60309;font-size:1.2em;background:#fff;border-radius:3px;float:right;position:absolute;right:10px;top:7.5px;}
+/*deal detail ends*/
+
+/*Splash Screen*/
+
+.splashLogoNContainer {
+    width: 100%;
+    height: 60%;
+    float: left;
+    background: #c60309;
+    position: fixed;
+    z-index: 9;
+}
+
+.splashLogo {
+    width: 50%;
+    float: left;
+    height: auto;
+    left: 50%;
+    margin-left: -20%;
+    position: absolute;
+    top: 25%;
+    max-height: 100% !important;
+}
+
+.splashLogoImg {
+    width: 100%;
+    height: auto;
+    float: left;
+    max-height: 100% !important;
+}
+
+.welcomeSplashTxt {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 1.7em;
+    position: absolute;
+    bottom: 20%;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+
+.splashArrowDown {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em !important;
+    color: #c60309;
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+}
+
+.statisticsContainer {
+    background: #e5e5e5;
+    position: fixed;
+    bottom: 0px;
+    height: 40%;
+    width: 100%;
+}
+
+.mainStatistics {
+    width: 100%;
+    float: left;
+    margin-top: 14%;
+}
+
+.statisticsMainP {
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 1em;
+    color: #c60309;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+}
+
+.statsNumber {
+    font-size: 1.3em;
+}
+
+.statsTopic {
+    font-size: 1.15em;
+}
+
+.getStartedButtonHolder {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    float: left;
+}
+
+.getStartedButton {
+    min-height: 0!important;
+    width: 94% !important;
+    float: left;
+    border-radius: 5px;
+    background: rgba(198,3,9,1);
+    color: #fff !important;
+    font-size: 1em;
+    text-align: center;
+    margin-left: 3%;
+    border: 0 !important;
+}
+
+@media (min-width: 800px) {
+    .splashLogo {
+        width: 30%;
+        float: left;
+        height: auto;
+        left: 50%;
+        margin-left: -11%;
+        position: absolute;
+        top: 14%;
+        max-height: 100% !important;
+    }
+
+    .mainStatistics {
+        margin-top: 3%;
+    }
+
+    .statisticsMainP {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .welcomeSplashTxt {
+        font-size: 1.8em;
+    }
+
+    .getStartedButton {
+        font-size: 1.4em;
+        padding: 4px 0px;
+    }
+}
+
+/*
+ * Begin Intro Page 1
+*/
+
+/*intro screen 1 starts*/
+.mainWrapperIntro {
+    width: 100%;
+    float: left;
+    height: 100%;
+}
+
+.introIconNContainer1 {
+    width: 100%;
+    height: 60%;
+    float: left;
+    background: #085fe2;
+    position: fixed;
+    z-index: 9;
+}
+
+.introIcons {
+    color: #fff;
+    font-size: 7em !important;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+    text-align: center;
+    margin-top: 15%;
+    width: 100%;
+}
+
+.introHeading {
+    float: left;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    margin: 20px 10% 10px;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+    line-height: 32px;
+}
+
+.introNormalTxts {
+    float: left;
+    width: 66%;
+    text-align: center;
+    margin: 0px 16%;
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
+    line-height: 26px;
+}
+
+.intro1ArrowDown {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em !important;
+    color: #085fe2;
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+}
+
+.introDescriptionContainer {
+    background: #e5e5e5;
+    position: fixed;
+    bottom: 0px;
+    height: 40%;
+    width: 100%;
+}
+
+.mainContentDescription {
+    float: left;
+    width: 86%;
+    margin: 35px 7% 0px;
+}
+
+.mainContentDescriptionEarn {
+    float: left;
+    width: 86%;
+    margin: 25px 7% 0px;
+}
+
+.intro1descriptionTxt {
+    font-size: 1em;
+    color: #1d1d1d;
+    text-align: center;
+    line-height: 24px;
+}
+
+.intoNavigationBubbleUl {
+    float: left;
+    width: 56px;
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.introNavigationHolder {
+    width: 100%;
+    float: left;
+    position: fixed;
+    bottom: 15px;
+    left: 0%;
+}
+
+.nextButtonIntro {
+    padding: 8px 10px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 15px;
+}
+
+.nextTxtIntro {
+    font-size: 1em;
+    color: #fff;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    float: left;
+}
+
+.nextArrowIntro {
+    float: right;
+    color: #fff;
+    font-size: 1.35em !important;
+    margin: 1.6px 0px 0px 10px;
+}
+
+.previousButtonIntro {
+    padding: 8px 10px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 15px;
+}
+
+.previousTxtIntro {
+    font-size: 1em;
+    color: #fff;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+    float: right;
+}
+
+.previousArrowIntro {
+    float: left;
+    color: #fff;
+    font-size: 1.35em !important;
+    margin: 1.6px 10px 0px 0px;
+}
+
+.intoNavigationBubbleLi {
+    float: left;
+    margin-right: 10px;
+}
+
+.intoNavigationBubbleLi:last-child {
+    margin-right: 0px;
+}
+
+.circleIntro {
+    font-size: 0.8em !important;
+    color: rgba(255,255,255,0.7);
+    opacity: 0.3;
+}
+
+.active {
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    opacity: 1;
+}
+
+.intro1Button {
+    background: rgba(8,95,226,1);
+}
+
+@media (min-width: 350px) {
+    .introHeading {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .introIcons {
+        margin-top: 18%;
+    }
+
+    .intro1descriptionTxt {
+        line-height: 28px;
+    }
+}
+
+/*intro screen 1 ends*/
+
+
+/*intro screen 2 starts*/
+.introIconNContainer2 {
+    width: 100%;
+    height: 60%;
+    float: left;
+    background: #b107e3;
+    position: fixed;
+    z-index: 9;
+}
+
+.introHeading2 {
+    float: left;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    margin: 15px 10% 10px;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+    line-height: 32px;
+}
+
+.intro2ArrowDown {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em !important;
+    color: #b107e3;
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+}
+
+.intro2descriptionHeading {
+    font-size: 1em;
+    color: #1d1d1d;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    margin: 10px 0 7px;
+}
+
+.intro2descriptionTxt {
+    font-size: 0.8em;
+    color: #1d1d1d;
+    font-weight: normal;
+    text-align: center;
+    line-height: 26px;
+}
+
+.intro2Button {
+    background: rgba(177,7,227,1);
+}
+/*intro screen 2 ends*/
+
+
+/*intro screen 3 starts*/
+.introHeading3 {
+    float: left;
+    width: 70%;
+    color: #fff;
+    text-align: center;
+    margin: 20px 15% 10px;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+    line-height: 32px;
+}
+
+.introIconNContainer3 {
+    width: 100%;
+    height: 60%;
+    float: left;
+    background: #02b30a;
+    position: fixed;
+    z-index: 9;
+}
+
+.intro3ArrowDown {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em !important;
+    color: #02b30a;
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+}
+
+.intro3descriptionHeading {
+    font-size: 1em;
+    color: #1d1d1d;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    margin: 15px 0px;
+}
+
+.intro3descriptionTxt {
+    font-size: 0.8em;
+    color: #1d1d1d;
+    font-weight: normal;
+    text-align: center;
+    line-height: 26px;
+}
+
+.intro3Button {
+    background: rgba(2,179,10,1);
+}
+
+@media (min-width: 600px) {
+    .introIcons {
+        margin-top: 20%;
+        font-size: 8em !important;
+    }
+
+    .introHeading {
+        width: 50%;
+        margin: 40px 25% 0px;
+        font-size: 1.8em;
+        line-height: 38px;
+    }
+
+    .mainContentDescription {
+        width: 60%;
+        margin: 5% 20%;
+    }
+
+    .intro1descriptionTxt {
+        font-size: 1.5em;
+        line-height: 40px;
+		margin-top:6%;
+    }
+
+    .nextTxtIntro {
+        font-size: 1.5em;
+    }
+
+    .previousTxtIntro {
+        font-size: 1.5em;
+    }
+
+    .introHeading2 {
+        width: 40%;
+        margin: 25px 30% 0px;
+        font-size: 1.8em;
+        line-height: 38px;
+    }
+
+    .introHeading3 {
+        width: 40%;
+        margin: 25px 30% 0px;
+        font-size: 1.8em;
+        line-height: 38px;
+    }
+
+    .introNormalTxts {
+        margin: 10px 16%;
+        font-size: 1.2em;
+    }
+
+    .intro2descriptionHeading {
+        font-size: 1.8em;
+		margin-bottom:20px;
+    }
+
+    .intro2descriptionTxt {
+        font-size: 1.5em;
+		line-height: 40px;
+    }
+}
+/*intro screen 3 ends*/
+
+/*geo location starts*/
+.geoLocationMain {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background: #c60309;
+}
+
+.customTagIconGeo {
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    font-size: 5em !important;
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.geoHeadingTxt {
+    font-size: 1.3em;
+    color: #fff;
+    padding: 0px 10%;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    text-align: center;
+    margin: 15% 0px;
+    line-height: 30px;
+    width: 100%;
+}
+
+.locationServicesTxt {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.locationTxtSpan {
+    padding: 7px 15px;
+    color: #c60309;
+    text-align: center;
+    background: #fff;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+
+.andHolder {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.andMainGeo {
+    color: #c60309;
+    background: #fff;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 3px 7px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+
+.bottomTxtGeo {
+    position: absolute;
+    bottom: 5%;
+}
+
+@media (max-width: 400px) {
+    .bottomTxtGeo {
+        bottom: 5%;
+    }
+}
+
+@media (max-height: 500px) {
+    .bottomTxtGeo {
+        bottom: -5%;
+    }
+}
+
+@media (min-width: 600px) {
+    .geoHeadingTxt {
+        margin: 5% 0px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .introIcons {
+        margin-top: 6%;
+        width: 100%;
+    }
+}
+/*geo location ends*/
+
+/*category intro screen starts*/
+.categoryIntroBg {
+    background: #b9046a;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    height: 100%;
+}
+
+.categoryIntroMain {
+    width: 100%;
+    float:left;
+    position: relative;
+}
+
+.categoryIntroIconCustom {
+    background: #fff;
+    font-size: 6em !important;
+    color: #b9046a;
+    text-shadow: inset 2px 0px 3px rgba(0,0,0,0.5);
+    padding: 25px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin: 5% 0px 0px -65px;
+}
+
+.categoryIntroHeading {
+    width: 80%;
+    float: left;
+    color: #fff;
+    font-size: 1.7em;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 30px;
+    margin: 20px 10% 5px;
+}
+
+.categoryIntroTxt {
+    width: 90%;
+    float: left;
+    margin: 25px 5%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #fff;
+    line-height: 24px;
+}
+
+.categoryIntroButton {
+    position: fixed;
+    bottom: 15px;
+    background: #fff;
+    color: #b9046a;
+    padding: 6px 0px;
+    border-radius: 5px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+}
+/*category intro screen ends*/
+
+/*category selection screen starts*/
+.actionBarCategory {
+    background: #fff;
+    box-shadow: 2px 0px 2px rgba(0,0,0,0.7) !important;
+}
+
+.categorySelectionBg {
+    background: #c60309;
+}
+
+.categorySelectionMain {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.selectCatHeading {
+    font-size: 1.3em;
+    color: #c60309;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+
+.selectCategoryUl {
+    width: 100%;
+    float: left;
+    margin-top: 45px;
+}
+
+.continueWithSelection {
+    width: 100%;
+    padding: 10px 0px;
+    color: #c60309;
+    background: #fff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 800;
+    margin: 15px 0% 0px !important;
+    display: block !important;
+}
+
+.startExploringTxt {
+    padding: 5px 0px;
+    border-radius: 5px;
+    color: #c60309;
+    background: #fff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 800;
+}
+/*category selection screen ends*/
+
+/*user registration starts*/
+.userRegistrationMain {
+   width: 100%;
+   float:left;
+}
+.merchRegistrationMain {
+   width: 100%;
+}
+
+.greyBackground {
+    background: #e8e8e8;
+}
+
+.userRegHeadingNbutton {
+    width: 100%;
+    float: left;
+    padding: 15px 0px;
+    background: #fff;
+}
+
+.userRegistrationTxt {
+    float: left;
+    font-size: 1.1em;
+    color: #c60309;
+    margin: 2px 0px 0px 15px;
+    font-weight: bold;
+}
+
+.signUpAsStoreButton {
+    padding: 3px 10px;
+    background: #c60309;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    font-size: 0.9em;
+    margin-right: 15px;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.userSignUpMainBlock {
+    width: 100%;
+    background: #c60309;
+    padding: 15px;
+	float:inherit;
+}
+.clear{clear:both !important;}
+
+.socialSignUpMain {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.socialSignUpInner {
+    width: 250px;
+    float: left;
+    top: 50px;
+    left: 50%;
+    margin-left: -125px;
+    position: relative;
+}
+
+.signUpThroughFb {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 7px;
+    border-radius: 5px;
+    background: #3b5998;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+}
+
+.customFBiconSignUp {
+    float: left;
+    padding: 0px 14px !important;
+    color: #fff !important;
+    font-size: 1.3em !important;
+    border-right: 1px solid #fff;
+}
+
+.signUpfromFbTxt {
+    float: left;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.1em;
+    margin-top: -3px;
+}
+
+.signUpThroughGP {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 7px;
+    border-radius: 5px;
+    background: #da4835;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+}
+
+.customGPiconSignUp {
+    float: left;
+    padding: 0px 8px 0px 13px !important;
+    color: #fff !important;
+    font-size: 1.3em !important;
+    border-right: 1px solid #fff;
+}
+
+.signUpfromGPTxt {
+    float: left;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.1em;
+    margin-top: -3px;
+}
+
+.checkBoxUniversal {
+    float: left;
+}
+
+.amAtStore {
+    font-size: 0.8em;
+    color: #fff;
+    margin: 0px 0px 0px 10px;
+    float: left;
+}
+.customAtStoreIcon {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: right;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+}
+
+.customAtStoreIcon1 {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: left;
+    position: absolute;
+    visibility: hidden;
+    right: 0px;
+    top: 0px;
+    padding:5px;
+}
+
+.atMyLocationCheck input {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+}
+/*user registration ends*/
+
+/*universal form elements starts*/
+.universalFormMain {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.formStep {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+  
+}
+
+.formStep:last-child {
+    float:left;
+    position:relative;
+    margin-bottom: 0px;
+}
+
+.textBoxForm {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 50%;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+    background: #fff;
+}
+
+.textBoxIcon {
+    background: #c6c6c6;
+    float: left;
+    height: 35px;
+    width: 35px;
+}
+
+.textBoxIcon i {
+    padding: 0px !important;
+    float: left !important;
+}
+
+.customUserNameIconReg {
+    font-size: 1.5em !important;
+    color: #c60309;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 6px !important;
+}
+
+.customPhoneNumIconReg {
+    font-size: 1.5em !important;
+    color: #c60309;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 8px !important;
+}
+
+.textAreaForm {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 65px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+    background: #fff;
+}
+
+.textAreaIcon {
+    background: #c6c6c6;
+    float: left;
+    height: 65px;
+    width: 35px;
+}
+
+.textAreaIcon i {
+    padding: 0px !important;
+    float: left !important;
+}
+
+.textBoxHolder {
+    float: left;
+    height: 35px;
+    width: 86%;
+    background: #fff;
+    position:relative;
+}
+
+.textAreaHolder {
+    float: left;
+    height: 65px;
+    width: 85%;
+    position:relative;
+}
+
+.textBoxInput {
+    height: 35px !important;
+    float: left;
+    width: 100%;
+    padding: 0px 10px !important;
+    color: #c60309 !important;
+    font-family: gothic !important;
+    background: #fff;
+}
+
+.textAreaInput {
+    height: 65px !important;
+    float: left;
+    width: 100%;
+    padding: 10px 10px !important;
+    color: #c60309 !important;
+    font-family: gothic !important;
+    background: #fff;
+}
+
+.buttonForm {
+    font-family: gothic !important;
+    font-size: 1.1em;
+    height: 35px;
+    padding: 0px 20px;
+    color: #c60309;
+    background: #eeeeee;
+    border: none !important;
+}
+
+.atMyLocationCheck{width:20px;float:left;height:20px;float:left;position:relative;}
+/*universal form elements ends*/
+
+/*merchant profile starts*/
+.merchantProfileMain {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.merchantProfileInfo {
+    width: 100%;
+    float: left;
+    height: 170px;
+    position: relative;
+}
+
+.merchantCoverPicInfo {
+    width: 100%;
+    float: left;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.merchantCoverPicImg {
+    width: 100%;
+    height: auto;
+    min-height: 170px;
+    float: left;
+}
+
+.merchantCoverOverlay {
+    width: 100%;
+    height: 180px;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(198,3,9,0.8);
+}
+
+.merchantProfilePicNinfo {
+    width: 90%;
+    float: left;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+}
+.mallProfilePicNinfo {
+    width: 90%;
+    float: left;
+    position: absolute;
+    top: 1%;
+    left: 5%;
+}
+
+.userProfilePicNinfo {
+    width: 90%;
+    float: left;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+
+.merchantProfilePic {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 48px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
+.userProfilePic {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
+.merchantProfilePicImg {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.merchantProfileInfoMain {
+    width: 73%;
+    float: right;
+	margin-top:10px;
+}
+
+.mallProfileInfoMain {
+    width: 73%;
+    float: right;
+	margin-top:10px;
+}
+
+.merchantNameTxt {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    float: left;
+    margin: 10px 0px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.merchantAddressTxt {
+    font-size: 0.9em;
+    color: #fff;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.merchantNumber {
+    font-size: 0.9em;
+    color: #fff;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.merchantNumberJSN {
+    font-size: 0.9em;
+    color: #fff;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.merchantFavs {
+    padding: 3px 6px;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    color: #c60309;
+    font-size: 1em;
+}
+
+.numberCheckins {
+    padding: 3px 6px;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    color: #c60309;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.welcomeMerchantOption {
+    width: 100%;
+    float: left;
+    background:#c60309;
+}
+
+.merchantWelcomeTxt {
+    font-size: 1.3em;
+    color: #c60309;
+    background:#fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0px;
+	text-shadow: 1px 0px 0px rgba(0,0,0,0.2);
+}
+
+.merchantOptionsMain {
+    width: 90%;
+    float: left;
+    margin: 15px 5%;
+}
+
+.merchantOptionsRowNew{margin:10px 10% 10px !important;float:left;}
+
+.merchantOptionNumber{font-size: 2.8em!important;top: 42% !important;}
+
+.postAdealMerchant {
+    width: 30%;
+    float: left;
+}
+
+.postAdealIcon {
+    width: 100%;
+    height: auto;
+}
+
+.dealAnalyticsMerchant {
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+}
+
+.dealAnalyticsIcon {
+    width: 100%;
+    height: auto;
+}
+
+.manageDealsMerchant {
+    width: 30%;
+    float: right;
+}
+
+.manageDealsIcon {
+    width: 100%;
+    height: auto;
+}
+
+.merchantOptionTxt {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    color: #c60309;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+@media (min-width: 600px) {
+    .merchantOptionsMain {
+        width: 50%;
+        float: left;
+        margin: 40px 25%;
+    }
+
+    .dealAnalyticsMerchant {
+        width: 30%;
+        float: left;
+        margin-left: 5%;
+    }
+
+    .merchantOptionTxt {
+        font-size: 1.2em;
+    }
+}
+
+.textBoxHolderHalf {
+    float: left;
+    height: 35px;
+    width: 74.5%;
+}
+
+.halfWidthSpotDeal {
+    width: 48%;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+    background: #fff;
+}
+
+/*merchant profile ends*/
+
+
+/*post a deal starts*/
+.postAdealMain {
+    width: 100%;
+    float: left;
+}
+
+.postAdealHeading {
+    width: 100%;
+    float: left;
+    padding: 15px 0px;
+    background: #fff;
+}
+
+.postAdealTxt {
+    float: left;
+    font-size: 1.5em;
+    color: #c60309;
+    width: 100%;
+    margin-top: 2px;
+    text-decoration: none;
+    padding-bottom: 1px;
+    text-align: center;
+    font-weight: bold;
+	text-shadow:1px 0px 0px rgba(0,0,0,0.2);
+}
+
+.dealTypeContainer {
+    width: 100%;
+    float: left;
+}
+
+.postAdealMainBlock {
+    width: 100%;
+    float: left;
+    position: relative;
+    background: #c60309;
+    padding: 15px;
+}
+
+.dealTypeContainer {
+    width: 100%;
+    float: left;
+    height: 50px;
+    position: relative;
+}
+
+.dealTypeInner {
+    width: 220px;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -110px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+}
+
+.dealTypeButton {
+    width: 110px !important;
+    background: #fff;
+    padding: 4px 0px;
+    text-align: center;
+    float: left;
+    color: #c60309;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.activeDealType {
+    background: #c60309 !important;
+    color: #fff !important;
+}
+
+.addPhotoOrTakeContainer {
+    width: 100%;
+    position: relative;
+    float: left;
+    height: 120px;
+}
+
+.addPhotoOrTakeInner {
+    width: 300px;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.addPhotoPostDeal {
+    width: 120px;
+    height: 120px;
+    float: left;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+    margin-left: 30%;
+	position:relative;
+}
+
+.addPhotoPostDealInner {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 2px dashed #707070;
+    position:absolute;top:10px;left:9px;
+}
+
+.customAddPhotoIcon {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 3em !important;
+    color: #707070;
+    margin-top: 20px;
+}
+
+.addOrTakePhotoTxt {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1em;
+    color: #707070;
+}
+
+.takePhotoPostDeal {
+    width: 120px;
+    height: 120px;
+    float: left;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+    margin-left: 5px;
+}
+
+.takePhotoPostDealInner {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 2px dashed #707070;
+    margin: 10px;
+}
+
+.customTakePhotoIcon {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 3em !important;
+    color: #707070;
+    margin-top: 20px;
+}
+
+.addOrTake {
+    padding: 3px 5px;
+    background: #fff;
+    color: #c60309;
+    font-weight: 600;
+    font-size: 1em;
+    border-radius: 100%;
+    float: left;
+    margin: 14% 7px 14% 11px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+}
+/*post a deal ends*/
+
+/*
+    PopUp Styling
+*/
+
+
+/*favourite store starts*/
+.favStoresMain {
+    width: 100%;
+    float: left;
+    padding: 15px;
+	background:#fff;
+}
+
+.noFavStoreFound {
+    width: 100%;
+    float: left;
+}
+
+.nofavStoreImage {
+    width: 180px;
+    float: left;
+	position:relative;
+	left:50%;
+    margin: 0px 0px 10px -90px;
+}
+
+.noFavStoreImg {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.noFavStoreHeading {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1.1em;
+    color: #c60309;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.noFavStoreTxt {
+    width: 90%;
+    float: left;
+    margin: 0px 5% 20px;
+    font-size: 0.8em;
+    color: #3e3e3e;
+    text-align: center;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+}
+
+.favStoresInner {
+    width: 100%;
+    float: left;
+}
+
+.favStoresHeading {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1.1em;
+    color: #c60309;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.searchFavStores {
+    width: 80%;
+    float: left;
+    margin: 5px 10% 15px;
+    position: relative;
+}
+
+.inputSearchFavStores {
+    width: 100%;
+    padding: 3px 45px 3px 8px !important;
+    background: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color: #c60309;
+}
+
+.customSearchFavStoreIcon {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    float: left;
+    font-size: 1.5em;
+    color: #c60309;
+    padding: 0px 10px;
+    border-left: 1px solid #c60309;
+}
+
+.favStoresListUl {
+    width: 100%;
+    float: left;
+}
+
+.favStoresListUl1 {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.favStoresListLi {
+    width: 30%;
+    float: left;
+    margin: 0px 1.5% 10px;
+    position: relative;
+}
+
+.storeImageNinfoFav {
+    width: 100%;
+    overflow: hidden;
+    height: 90px;
+    position: relative;
+}
+
+.storeImageFav {
+    width: 100%;
+    height: 90px;
+    float: left;
+}
+
+.storeImgFav {
+    width: 100%;
+    float: left;
+    height: auto;
+    min-height: 100%;
+}
+
+.storeNameFav {
+    width: 100%;
+    float: left;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    position: absolute;
+    background: rgba(189,189,189,0);
+    background: -moz-linear-gradient(top, rgba(189,189,189,0) 0%, rgba(48,48,48,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(189,189,189,0)), color-stop(100%, rgba(48,48,48,1)));
+    background: -webkit-linear-gradient(top, rgba(189,189,189,0) 0%, rgba(48,48,48,1) 100%);
+    background: -o-linear-gradient(top, rgba(189,189,189,0) 0%, rgba(48,48,48,1) 100%);
+    background: -ms-linear-gradient(top, rgba(189,189,189,0) 0%, rgba(48,48,48,1) 100%);
+    background: linear-gradient(to bottom, rgba(189,189,189,0) 0%, rgba(48,48,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdbdbd', endColorstr='#303030', GradientType=0 );
+}
+
+.storeNameFavTxt {
+    font-size: 1.1em;
+    color: #fff;
+    float: left;
+    width: 94%;
+    text-overflow:ellipse;
+    text-indent: 7px;
+    margin: 15px 0px 0px 0px;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
+}
+
+.favouriteStoreIcon {
+    right: 0px;
+    top: 0px;
+    float: right;
+    position: absolute;
+    padding: 5px;
+    background: rgba(18,18,18,0.7);
+}
+
+.customFavouriteStoreIcon {
+    float: left;
+    color: #fff;
+    font-size: 1em;
+}
+
+.makeFavoriteStoreDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.customFavStoreIcon {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: right;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+    padding:5px;
+    background:rgba(0,0,0,0.6);
+}
+
+.customFavStoreIcon1 {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: left;
+    position: absolute;
+    visibility: hidden;
+    right: 0px;
+    top: 0px;
+    padding:5px;
+}
+
+.makeFavoriteStoreDiv input {
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+}
+
+.makeFavoriteStoreDiv input:checked + .customFavStoreIcon1 {
+    visibility: visible;
+}
+/*favourite store ends*/
+
+/*store main starts*/
+.favoriteStoreIconNtxt{background:#fff;padding:4px 8px 2px 8px;border-radius:5px;float:left;}
+.callBusinessIconNtxt{background:#fff;padding:4px 8px 2px 8px;border-radius:5px;float:left;}
+.customFavStoreIconStoreMain{font-size:1.2em !important;color:#c60309;float:left;margin-right:5px;margin-top:2px;}
+.favotiteStoreTxt{float:left;color:#c60309;font-size:0.9em;}
+/*store main ends*/
+
+/*user profile starts*/
+.userProfileMain {width: 100%;position: relative;}
+
+.userProfileInfo {width: 100%;float: left;height: 230px;position: relative;}
+
+.userCoverPicInfo {width: 100%;float: left;height: 230px;position: relative;overflow: hidden;}
+
+.userCoverPicImg {width: 100%;height: auto;min-height: 230px;float: left;}
+
+.userCoverOverlay {width: 100%;height: 230px;float: left;position: absolute;top: 0px;left: 0px;background: rgba(198,3,9,0.8);}
+
+.userProfilePicNinfo {width: 90%;float: left;position: absolute;top: 15%;left: 5%;}
+
+.userProfilePic {width: 140px;height: 140px;float: left;border-radius: 100%;overflow: hidden;margin: 0px 0px 15px -70px;position:relative;left:50%;box-shadow: 0px 0px 5px rgba(0,0,0,0.7);}
+
+.userProfilePicImg {width: 100%;height: 100%;float: left;}
+
+.userProfileInfoMain {width: 100%;float: left;}
+
+.userNameTxt {font-size: 1.3em;color: #fff;font-weight: bold;width: 100%;float: left;margin: 0px 0px 5px 0px;text-align:center;}
+
+.userAddressTxt {
+    font-size: 0.9em;
+    color: #fff;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.userNumber {
+    font-size: 0.9em;
+    color: #fff;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.userNumberJSN {
+    font-size: 0.9em;
+    color: #fff;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.welcomeUserOption {
+    width: 100%;
+    float: left;
+	background:#fff;
+}
+
+.userWelcomeTxt {
+    font-size: 1.3em;
+    color: #c60309;
+    font-weight: 600;
+    text-align: center;
+    
+    margin: 10px 0px;
+}
+
+.userOptionsMain {
+    width: 90%;
+    float: left;
+    margin: 0px 5%;
+}
+
+.userOptionsRow {
+    width: 80%;
+    float: left;
+    margin: 0px 10% 10px;
+}
+
+.userOptionsRow:first-child {
+    margin: 10px 10% 10px;
+}
+
+.userOptionMainInner {
+    width: 40%;
+}
+
+.userOptionBgNumber {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.userOptionBg {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+.userOptionNumber {
+    width: 100%;
+    float: left;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    font-size: 2.4em;
+    top: 38%;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+}
+
+.userOptionNameTxt {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #c60309;
+    font-weight: 600;
+}
+
+.userNoteContainer {
+    width: 100%;
+    padding: 10px 15px;
+    background: #c60309;
+    float: left;
+}
+
+.noteHeading {
+    float: left;
+    width: 100%;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.noteInfoTxt {
+    float: left;
+    width: 100%;
+    font-size: 0.9em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+    text-align: justify;
+}
+/*user profile ends*/
+
+/*location error starts*/
+.locationErrorBg {
+    background: #55509d;
+    width: 100%;
+    padding: 15px;
+    height: 100%;
+}
+
+.loadingErrorIconHolder {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin: 10px 0px;
+}
+
+.loadingErrorIcon {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    margin-left: -25%;
+    top: 0px;
+    height: auto;
+}
+
+.loadingErrorHeading {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 1.5em;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.4);
+    text-align: center;
+    line-height: 32px;
+    margin: 25px 0% 5px;
+}
+
+.locationErrorButtonHolder {
+    width: 100%;
+    padding:0px 0px 0px 0px;
+}
+
+.locationErrorButton {
+    background: #fff;
+    color: #55509d;
+    padding: 6px 0px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+	float:left;
+	width:100%;
+}
+/*location error ends*/
+
+/*manage deals starts*/
+.activeOrInactive {
+    float: left;
+    margin-right: 8px;
+    padding: 2px 8px;
+    color: #c60309;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 99;
+}
+
+.upgraDealButton {
+    float: left;
+    padding: 2px 8px;
+    color: #c60309;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 99;
+}
+
+.activeDeal {
+    background: #1fcb0d;
+    color: #fff;
+}
+
+.manageDealsHeading {
+    float: left;
+    font-size: 1.5em;
+    color: #c60309;
+    width: 100%;
+    margin: 15px 0px;
+    text-decoration: none;
+    padding-bottom: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dealAnalyticsInner {
+    width: 100%;
+    float: left;
+}
+
+.analyticsMainTxt {
+    margin-bottom: 5px;
+    float: left;
+    width: 50%;
+    color: #fff;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+}
+
+.dealTitleAnalyticsTxt {
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+    margin: 5px 0px 20px 0px;
+    text-overflow: ellipsis;
+}
+
+.viewDealAnalyticsButton {
+    float: left;
+    padding: 3px 7px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 600px) {
+    .dealTitleAnalyticsTxt {
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        margin: 3px 0px 10px 0px;
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+    }
+}
+/*manage deals ends*/
+
+/*deals listing page starts*/
+.dealsList {
+    width: 100%;
+    float: left;
+}
+
+.dealSingle {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dealSingle:nth-child(odd) {
+    background: #c60309;
+}
+
+.dealSingle:nth-child(even) {
+    background: #dc0910;
+}
+
+.dealImageNShadow {
+    width: 125px;
+    height: 85px;
+    float: left;
+    position: relative;
+    margin: 10px 0px 0px 10px;
+}
+
+.dealImageListing {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
+}
+
+.dealImgListing {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.dealShadowListing {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    z-index: 0;
+}
+
+.dealListingDetails {
+    float: left;
+    width: 76%;
+    overflow: hidden;
+}
+
+.dealTitleTxt {
+    color: #fff !important;
+    font-size: 1em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4) !important;
+    font-family: gothic;
+    margin: 5px 0px 6px 0px;
+    text-overflow: ellipsis !important;
+    font-weight: 600 !important;
+}
+
+.dealStoreTxt {
+    float: left;
+    color: #fff;
+    font-size: 0.8em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+    width: 100% !important;
+    text-overflow: ellipsis !important;
+}
+
+.dealLocationTxt {
+    float: left;
+    color: #fff;
+    font-size: 0.8em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+    width: 100% !important;
+    text-overflow: ellipsis !important;
+}
+
+.rightIconDealList {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    text-decoration: 0px 0px 5px rgba(0,0,0,0.5);
+    font-size: 1.7em !important;
+    right: 10px;
+}
+/*deals listing page ends*/
+
+@media (max-width: 600px) {
+    .dealImageNShadow {
+        width: 75px;
+        height: 65px;
+    }
+
+    .dealImageListing {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dealShadowImg {
+        width: 85px;
+        height: 62px;
+        float: left;
+    }
+
+    .dealShadowListing {
+        position: absolute;
+        top: 1px;
+        left: 3px;
+        z-index: 0;
+    }
+
+    .dealListingDetails {
+        width: 69%;
+    }
+
+    .rightIconDealList {
+        font-size: 1em !important;
+    }
+}
+
+/*upgrade deal intro starts*/
+.upgradeDealMain {
+    width: 100%;
+}
+
+.whyToUpgradeMain {
+    width: 100%;
+    float: left;
+    background: #fff;
+    padding: 15px;
+}
+
+.whyToUpgradeHeading {
+    font-size: 1.3em;
+    text-align: center;
+    width: 90%;
+    color: #c60309;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    margin: 0px 5% 15px;
+    line-height: 26px;
+}
+
+.whyToUpgradeSubHeading {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    color: #c60309;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    line-height: 26px;
+}
+
+.whyToUpgradeTxt {
+    font-size: 0.9em;
+    text-align: center;
+    width: 90%;
+    color: #c60309;
+    margin: 0px 5% 10px;
+    color: #c60309;
+}
+
+.whyToUpgradeTxt:last-child {
+    margin-bottom: 0px;
+}
+
+.allSpotsMain {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    background: #c60309;
+}
+
+.allSpotHeading {
+    font-size: 1.3em;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    margin: 0px 0px 15px;
+    line-height: 26px;
+}
+
+.allSpotInner {
+    width: 90%;
+    float: left;
+    margin: 0px 5%;
+}
+
+.allSpotInnerImage {
+    width: 100%;
+    float: left;
+    margin: 0px 0px 10px;
+}
+
+.allSpotInnerImg {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+.allSpotInnerHeading {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.allSpotInnerTxt {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.chooseUrSpotButton {
+    width: 94%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    padding: 6px 0px;
+    background: #c60309;
+    font-weight: 700;
+    border-radius: 5px;
+	margin:0px 3% 20px;
+}
+
+.upgradeNavigationBubbleUl {
+    float: left;
+    width: 56px;
+    left: 50%;
+    margin: 0px 0px 15px -28px;
+    position: relative;
+}
+
+.upgradeNavigationHolder {
+    width: 100%;
+    float: left;
+    position: fixed;
+    bottom: 15px;
+    left: 0%;
+}
+
+.upgradeNavigationBubbleLi {
+    float: left;
+    margin-right: 10px;
+}
+
+.upgradeNavigationBubbleLi:last-child {
+    margin-right: 0px;
+}
+
+.active {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+.circleUpgrade {
+    font-size: 0.8em !important;
+    color: rgba(255,255,255,0.7);
+}
+/* End upgrade deal */
+
+/*deal analytics starts*/
+.dealAnalyticsMainInner {
+    width: 100%;
+    float: left;
+    padding: 0px 15px;
+    margin: 0px 0px 10px;
+}
+
+.dealAnalyticsInner {
+    width: 100%;
+    float: left;
+}
+
+.dealImpressionsMain {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.dealImpressionsNumber {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    margin-left: 3px;
+}
+
+.impressionsIconCustom {
+    font-size: 0.6em !important;
+    float: left;
+    margin-left: 5px;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 18px;
+}
+
+.dealImpressionsTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dealSavesMain {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.dealSavesNumber {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    margin-left: 3px;
+}
+
+.savesIconCustom {
+    font-size: 0.5em !important;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    float: left;
+    margin-left: 5px;
+    bottom: 20px;
+}
+
+.dealSavesTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dealSharesMain {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.dealSharesNumber {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    margin-left: 3px;
+}
+
+.sharesIconCustom {
+    font-size: 0.5em !important;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    float: left;
+    margin-left: 5px;
+    bottom: 20px;
+}
+
+.dealSharesTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dealCheckinMain {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.dealCheckinNumber {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    margin-left: 3px;
+}
+
+.checkinIconCustom {
+    font-size: 0.7em !important;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    float: left;
+    margin-left: 5px;
+    bottom: 20px;
+}
+
+.checkIconCustom {
+    font-size: 0.25em !important;
+    float: left;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    margin-left: 15px;
+    bottom: 20px;
+}
+
+.dealCheckinTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dealReportsMain {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.dealReportsNumber {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    margin-left: 3px;
+}
+
+.reportsIconCustom {
+    font-size: 0.5em !important;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    position: absolute;
+    float: left;
+    margin-left: 5px;
+    bottom: 20px;
+}
+
+.dealReportsTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.7em;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.dealTitleAnalyticsTxt1 {
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    font-family: gothic;
+    margin: 10px 0px 10px 0px;
+    text-overflow: ellipsis;
+}
+/*deal analytics ends*/
+
+/*deal type bar starts*/
+.tabCustomBar .tabs {
+    background: #ffffff;
+ /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #dededf 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dededf));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#dededf 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#dededf 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#dededf 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#dededf 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dededf',GradientType=0 );
+ /* IE6-9 */
+    height: 40px;
+}
+
+.tabCustomBar .tabs .tab-item {
+    color: #c60309;
+    font-size: 1em !important;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.6) !important;
+    opacity: 0.8 !important;
+    height: 45px;
+    line-height: 40px;
+    font-family: gothic;
+}
+
+.tabCustomBar .tabs .tab-item.active {
+    color: #c60309 !important;
+    font-size: 1em !important;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.6) !important;
+    opacity: 1 !important;
+    margin-top: 0px !important;
+    border-style: solid !important;
+    border-width: 0px 0 3px !important;
+    border-color: #c60309 !important;
+    height: 40px;
+}
+
+/*deal type bar ends*/
+
+/*deal listing carousel starts*/
+.dealCarouselMain {
+    width: 100%;
+    float: left;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dealCarouselImageHolder {
+    width: 100%;
+    float: left;
+    height: 200px;
+}
+
+.dealCarouselImg {
+    width: 100%;
+    float: left;
+    height: auto;
+    min-height: 100%;
+}
+
+.dealCarouselContentHolder {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100%;
+    z-index: 9;
+    padding: 15px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(25,25,25,1) 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(25,25,25,1)));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(25,25,25,1) 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(25,25,25,1) 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(25,25,25,1) 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(25,25,25,1) 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#191919',GradientType=0 );
+ /* IE6-9 */;
+}
+
+.dealCarouselContentHolderInner {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.dealCarouselContentStoreImage {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.dealCarouselContentStoreImg {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.dealCarouselContentStore {
+    float: left;
+    margin-left: 10px;
+    width: 225px;
+}
+
+.dealCarouselContentTitle {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.6);
+    margin: 0px 0px 2px;
+}
+
+.dealCarouselContentStoreName {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.6);
+}
+/*deal listing carousel ends*/
+
+/*bottom tab main starts*/
+.bottomTabMain>.tabs {
+    background: rgba(61,57,58,1);
+    background: -moz-linear-gradient(top, rgba(61,57,58,1) 0%, rgba(35,34,34,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(61,57,58,1)), color-stop(100%, rgba(35,34,34,1)));
+    background: -webkit-linear-gradient(top, rgba(61,57,58,1) 0%, rgba(35,34,34,1) 100%);
+    background: -o-linear-gradient(top, rgba(61,57,58,1) 0%, rgba(35,34,34,1) 100%);
+    background: -ms-linear-gradient(top, rgba(61,57,58,1) 0%, rgba(35,34,34,1) 100%);
+    background: linear-gradient(to bottom, rgba(61,57,58,1) 0%, rgba(35,34,34,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d393a', endColorstr='#232222', GradientType=0 );
+    border: 0px !important;
+}
+
+.bottomTabMain>.tabs a i {
+    color: #fff;
+}
+/*bottom tab main ends*/
+
+
+/*user settings starts*/
+.userSettingsMain {
+    width: 100%;
+}
+
+.userSettingsMainInner {
+    width: 100%;
+    float: left;
+}
+
+.userSettingsAccordianSingle {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.userSettingsAccordianMain {
+    background: #e0dfe0;
+ /* Old browsers */
+    background: -moz-linear-gradient(top,  #e0dfe0 0%, #edeeed 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0dfe0), color-stop(100%,#edeeed));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e0dfe0 0%,#edeeed 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e0dfe0 0%,#edeeed 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e0dfe0 0%,#edeeed 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  #e0dfe0 0%,#edeeed 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0dfe0', endColorstr='#edeeed',GradientType=0 );
+ /* IE6-9 */
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+.userSettingsAccordianMaintxt {
+    float: left;
+    margin: 12px 0px 0px 15px;
+    font-size: 1.2em;
+    color: #c60309;
+    font-weight: 600;
+}
+
+.customAccordianSettingsIcon {
+    color: #fff;
+    background: #c60309;
+    padding: 6px 6px 5px 8px;
+    border-radius: 100%;
+    font-size: 0.7em !important;
+    float: right;
+    margin: 13px 10px 0 0;
+}
+
+.customAccordianSettingsIcon1 {
+    color: #fff;
+    background: #c60309;
+    padding: 5px 5px 4px 5px;
+    border-radius: 100%;
+    font-size: 0.7em !important;
+    float: right;
+    margin: 8px 10px 0px 0px;
+}
+
+.connectYourFBAccount {
+    width: 100%;
+    float: left;
+    background: #3b5998;
+    padding: 15px 15px;
+}
+
+.connectYourFbTxtHolder {
+    width: 80%;
+    float: left;
+}
+
+.connectFbAccountTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    line-height: 28px;
+}
+
+.earnKarmaPointsFbTxt {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 1em;
+}
+
+.customConnectFacebookIcon {
+    width: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: 3em !important;
+    float: left;
+    margin-top: 20px;
+}
+
+.spreadMadzzLoveMain {
+    width: 100%;
+    float: left;
+    background: #c60309;
+    position: relative;
+    padding: 30px 15px;
+}
+
+.spreadMadzzLoveInner {
+    width: 112px;
+    float: left;
+    position: relative;
+    margin-left: -56px;
+    left: 50%;
+    top: 10px;
+    height: 112px;
+}
+
+.madzzSpreadLoveLogo {
+    width: 112px;
+    height: auto;
+}
+
+.spreadLoveButton {
+    width: 100%;
+    float: left;
+    background: #fff;
+    color: #c60309;
+    font-size: 1.2em;
+    padding: 5px 0px;
+    text-align: center;
+    bottom: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.webPasswordInner {
+    width: 100%;
+    float: left;
+    background: #c8c8c8;
+    padding: 10px;
+}
+
+.textBoxIcon1 {
+    background: #c60309;
+    float: left;
+    height: 35px;
+    width: 35px;
+}
+
+.textBoxIcon1 i {
+    padding: 0px !important;
+    float: left !important;
+    color: #fff !important;
+}
+/*user settings ends*/ 
+
+/*over right ioninc css starts*/
+.bar-footer{background:none !important;}
+.remindLaterSignUp{width:100%;float:left;}
+.popup{width:280px !important;height:310px !important;border-radius:5px !important;position:fixed !important;top:10% !important;left:50% !important;margin-left:-140px !important;background:#fff !important;z-index:99 !important;float:left !important;box-shadow:1px 0px 12px rgba(0,0,0,0.3) !important;}
+.popup-head{display:none !important;}
+.popup-body{padding:0 !important;overflow:hidden !important;height:310px !important;}
+.popup-buttons{opacity:0;position:absolute;width:100%;bottom:0px;}
+/*over right ionic css ends*/
+
+/*pop up starts*/
+.popUpOverlay{width:100%;height:100%;position:fixed;background:rgba(0,0,0,0.7);top:0px;left:0px;z-index:9;}
+.successPopUp{width:280px;height:310px;border-radius:5px;z-index:99;float:left;box-shadow:1px 0px 12px rgba(0,0,0,0.3);}
+.successMessage{width:280px;height:250px;float:left;background:#12b601;border-radius:5px 5px 0px 0px;}
+.successPopUpHeading{width:80%;float:left;margin:15px 10% 15px;color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,0.6);text-align:center;font-size:1.7em;font-weight:400;}
+.customSuccessIcon{width:100%;float:left;text-align:center;color:#fff;font-size:8em !important;text-shadow:0px 0px 3px rgba(0,0,0,0.7);}
+.successMessageCustom{width:90%;float:left;margin:10px 5%;color:#fff;font-size:1em;text-align:center;}
+
+.successActionButtons{width:100%;float:left;position:relative;}
+.viewProfileButtonSuccess{float:left;padding:4px 0px;color:#fff;background:#12b601;border-radius:5px;margin:15px 0px 0px 15px;font-size:1em;width:100px;text-align:center;}
+.closeButtonSuccess{float:right;padding:4px 0px;color:#fff;background:#12b601;border-radius:5px;margin:15px 15px 0px 0px;font-size:1em;width:100px;text-align:center;}
+.orButtonSuccess{position:absolute;top:15px;left:50%;background:#12b601;color:#fff;font-size:1em;padding:3px 5px;border-radius:50%;margin-left:-13px;}
+
+.errorPopUp{width:280px;height:310px;border-radius:5px;float:left;box-shadow:1px 0px 12px rgba(0,0,0,0.3);}
+.errorMessage{width:280px;height:250px;float:left;background:#f40910;border-radius:5px 5px 0px 0px;}
+.errorPopUpHeading{width:80%;float:left;margin:15px 10% 15px;color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,0.6);text-align:center;font-size:1.7em;font-weight:400;}
+.customErrorIcon{width:100%;float:left;text-align:center;color:#fff;font-size:8em !important;text-shadow:0px 0px 3px rgba(0,0,0,0.7);}
+.errorMessageCustom{width:90%;float:left;margin:10px 5%;color:#fff;font-size:1em;text-align:center;}
+
+.errorActionButtons{width:100%;float:left;position:relative;}
+.viewProfileButtonError{float:left;padding:4px 0px;color:#fff;background:#f40910;border-radius:5px;margin:15px 0px 0px 15px;font-size:1em;width:100px;text-align:center;}
+.closeButtonError{float:right;padding:4px 0px;color:#fff;background:#f40910;border-radius:5px;margin:15px 15px 0px 0px;font-size:1em;width:100px;text-align:center;}
+.orButtonError{position:absolute;top:15px;left:50%;background:#f40910;color:#fff;font-size:1em;padding:3px 5px;border-radius:50%;margin-left:-13px;}
+/*pop up ends*/
+
+/*merchant profile initial starts*/
+.postAdealMerchantInitial{width:100%;float:left;margin-bottom:10px;height:90px;position:relative;}
+.postAdealMerchantImageHolder{width:70px;float:left;}
+.postAdealIconInitial{width:100%;height:auto;float:left;}
+
+.postAdealMerchantContent{float:left;width:70%;margin-left:15px;}
+.postAdealMerchantTxt{text-align:justify;font-size:1em;margin-top:5px;}
+
+.dealAnalyticsMerchantInitial{width:100%;float:left;margin-bottom:10px;height:90px;position:relative;}
+.dealAnalyticsMerchantImageHolder{width:70px;float:left;}
+.dealAnalyticsIconInitial{width:100%;height:auto;float:left;}
+
+.dealAnalyticsMerchantContent{float:left;width:70%;margin-left:15px;}
+.dealAnalyticsMerchantTxt{text-align:justify;font-size:1em;margin-top:5px;}
+
+.merchantOptionTxt2{width:100%;float:left;margin-top:5px;color:#c60309;font-weight:600;text-align:left;font-size:0.85em;position:absolute;bottom:0px;}
+
+.manageDealsMerchantInitial{width:100%;float:left;margin-bottom:10px;height:90px;position:relative;}
+.manageDealsMerchantImageHolder{width:70px;float:left;}
+.manageDealsIconInitial{width:100%;height:auto;float:left;}
+
+.manageDealsMerchantContent{float:left;width:70%;margin-left:15px;}
+.manageDealsMerchantTxt{text-align:justify;font-size:1em;margin-top:5px;}
+
+.merchantOptionTxt1{width:100%;float:left;margin-top:5px;color:#c60309;font-weight:600;text-align:left;font-size:0.85em;position:absolute;bottom:0px;}
+/*merchant profile initial ends*/
+
+/*karma points starts*/
+.karmaPointsMain{width:100%;float:left;}
+.karmaPointsInner{width:100%;float:left;height:135px;background:#b2070d;}
+.karmaPointsEarnedNvalue{width:90%;float:left;margin:12% 5% 0px;padding-bottom:5px;}
+.karmaPointsEarned{width:100%;float:left;color:#fff;}
+.karmaPointsEarnedTxt{width:100%;float:left;color:#fff;text-align:center;font-size:4em;font-weight:600;margin-bottom:10px;}
+.earnedTxt{font-size:0.4em !important;margin-left:10px;}
+.clickLeadership{text-decoration:underline;}
+.karmaPointsInfo{width:100%;float:left;text-align:center;padding-top:5px;color:#fff;font-size:0.8em;text-shadow:0px 0px 0px rgba(0,0,0,0.4);border-top:1px solid #fff;}
+
+.karmaPointsMedal{width:30px;height:40px;float:left;position:absolute;right:20px;top:20px;}
+.customTrophyIcon{color:#fff;font-size:2em !important;float:left;text-shadow: 0px 0px 1px rgba(0,0,0,1);}
+
+.karmaPointsEarnedMain{float:left;padding:0px 15px;width:45%;}
+.pointsEarned{color:#fff;font-size:4em;text-shadow:0px 0px 2px rgba(0,0,0,0.5);font-weight:600;width:100%;float:left;margin-bottom:15px;text-align:center;}
+.pointsEarnedTxt{width:100%;float:left;color:#fff;font-size:1em;text-shadow:0px 0px 0px rgba(0,0,0,0.4);text-align:center;}
+.karmaPointsEqauls{float:left;}
+.karmaPointsEqaulstxt{float:left;color:#fff;font-size:3em;font-weight:600;text-shadow:0px 0px 0px rgba(0,0,0,0.4);}
+.karmaPointsMoneyMain{float:left;width:40%;position:relative;}
+.moneyEarned{color:#fff;font-size:4em;text-shadow:0px 0px 2px rgba(0,0,0,0.5);font-weight:600;width:100%;float:left;text-align:center;margin-bottom:15px;text-indent:20px;}
+.moneyEarnedTxt{width:100%;float:left;color:#fff;font-size:1em;margin-left:10px;text-shadow:0px 0px 0px rgba(0,0,0,0.4);text-align:center;}
+.customRupeeIconKarma{float:right;position:absolute;color:#fff;font-size:3.6em !important;text-shadow:0px 0px 0px rgba(0,0,0,0.4);top:-11px;right:-18px;}
+
+
+.howToEarnMain{width:100%;float:left;}
+.howDoIearnHeading{width:100%;float:left;font-size:1.1em;color:#c60309;font-weight:600;text-align:center;margin:10px 0px 0px;text-decoration:underline;}
+.howDoIearnSubheading{width:90%;float:left;font-size:0.8em;color:#c60309;font-weight:600;text-align:center;margin:5px 5% 10px;}
+.howToEarnStepsMain{width:100%;float:left;}
+.howToEarnStepLeft{width:100%;float:left;background:#ececec;}
+.stepIconContainerKarma{float:left;padding:10px;margin-top:8%;}
+.customSaveDealIconKarma{font-size:3em !important;color:#646464;}
+.stepDetailsContainer{float:left;width:72%;margin-left:15px;}
+.stepDetailHeadingKarma{font-size:1.2em;color:#3e3e3e;font-weight:600;width:100%;float:left;margin:10px 0px;}
+.stepDetailTxtKarma{font-size:0.8em;color:#3e3e3e;width:100%;float:left;margin-bottom:10px;text-align:justify;}
+/*karma points ends*/
+
+/*leadership board starts*/
+.leadershipBoardMain{width:100%;float:left;}
+.leadershipSingleMain{width:100%;float:left;background:#c60309;border-bottom: 1px solid #fff;position:relative;}
+.leaderNumber{width:50px;height:50px;float:left;background:#a00005;color:#fff;text-align:center;font-size: 1.5em;line-height: 50px;}
+.leaderNameNimage{float:left;}
+.leaderPhoto{width:40px;height:40px;border-radius:34px;overflow:hidden;background:#fff;float:left;margin:5px;}
+.leaderPhotoImg{width:100%;height:100%;float:left;}
+.leaderNameTxt{float:left;margin-left:10px;color:#fff;font-size:1.2em;font-weight:600;margin-top: 14px;}
+.leaderKarmaPoints{width:80px;height:50px;float:right;background:#a00005;color:#fff;text-align:center;font-size: 1.5em;line-height: 50px;position:absolute;right:0px;top:0px;}
+/*leadership board ends*/
+
+.s3uploadButton{position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;opacity: 0;display:block !important;opacity:0;z-index:9999999;}
+
+/*merchant initial intro starts*/
+.merchIntroMain{width:100%;float:left;}
+.merchIntroSingle{width:100%;float:left;}
+.merchIntroHeading{font-size:1.4em;color:#fff;font-weight:600;text-align:center;width:100%;float:left;margin:10px 0px 15px;text-shadow:1px 1px 1px rgba(0,0,0,0.2);line-height: 30px;}
+.merchIntroImage{width:100%;float:left;margin:0px 0px 15px;}
+.composeIconIntro{font-size:3em;color:#fff;float:left;width:100%;text-align:center;text-shadow:1px 1px 1px rgba(0,0,0,0.2);}
+.merchIntroDescription{width:100%;float:left;color:#fff;font-size:1em;line-height:26px;text-align:center;}
+.merchIntroDots{width:100%;float:left;position:relative;margin-top:10px;height: 20px;}
+.merchIntroDotsUl{position:absolute;width:80px;float:left;left:50%;margin-left:-40px;top:0px;}
+.merchIntroDotsLi{color:#fff;font-size:1em;color:rgba(255,255,255,0.7);float:left;margin-right:10px;}
+.merchIntroDotsLi:last-child{margin-right:0px;}
+.activeDotIntro{color:rgba(255,255,255,1);}
+
+.postFirstDealButton{width:100%;float:left;color:#c60309;background:#fff;padding:5px 0px;border-radius:5px;text-align:center;font-size:1em;font-weight:600;margin:25px 0px 0px 0px;}
+/*merchant initial intro ends*/
+
+/*updated select categories starts*/
+.categoryIconContainer{width:40px;float:left;height:40px;}
+.customApparelIcon{float:left;color:#919191;width:45px;}
+.customFasionIcon{float:left;color:#919191;font-size:26px !important;width:45px;margin: 7px 0px 0px 0px;text-indent:7px;}
+.customHealthcareIcon{float:left;color:#919191;font-size:26px !important;width:45px;margin: 2px 0px 0px 0px;text-indent:2px;}
+
+.selectCategoryLi {width: 100%;height:40px;padding: 0px 0px;position: relative;float: left;border-bottom:1px solid #ececec;}
+.selectCategoryLi:nth-child(odd){background: rgba(230,230,230,1);}
+.selectCategoryLi:nth-child(even){background: rgba(255,255,255,1);}
+.selectCategoryLi:last-child{border-bottom:0px;}
+
+.categoryNameContainer{float:left;margin:9px 0px 0px 15px;}
+.selectCategoryTxt{color:#c60309;float:left;font-size:1em;font-weight:600;}
+
+.makeFavoriteDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:100%;
+	height:100%;
+	float:left;
+	/*8E2525*/
+}
+.makeFavoriteDivMain{background:#c60309;width: 40px;position: absolute;top: 0;right: 0;height: 40px;}
+.customFavCateIcon {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: right;
+    margin: 12px 10px 0 0;
+    text-align: right;
+}
+
+.customFavCateIcon1 {
+    font-size: 1.3em!important;
+    color: #fff;
+    float: left;
+    position: absolute;
+    visibility: hidden;
+    right: 10px;
+    top: 12px;
+}
+
+.makeFavoriteDiv input {
+    width: 100% !important;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+}
+
+.makeFavoriteDiv input:checked + .customFavCateIcon1 {
+    visibility: visible;
+}
+/*updated select categories ends*/
+
+/*fav store new starts*/
+.favStoresListUlNew{width:100%;float:left;margin-bottom: 30px;}
+.favStoresListLiNew{width:100%;float:left;height:80px;padding:10px 0px;background:#c60309;}
+.storeImageNinfoFavNew{float:left;margin-left:10px;height:60px;width: 90%;}
+.storeImageFavNew{float:left;height:60px;width:60px;background:#fff;border-radius:5px;overflow:hidden;}
+.storeImgFavNew{float:left;height:60px;width:60px;}
+.storeNameFavNew{float:left;margin-left:10px;}
+.storeNameFavTxtNew{font-size: 1.1em;
+    color: #fff;
+    float: left;
+    text-overflow:ellipse;
+    text-indent: 7px;
+    margin: 0px 0px 0px 0px;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
+}
+.favStoreCheckUncheck{float:left;color:#c60309;background:#fff;padding:4px 6px;border-radius:2px;position:relative;}
+.visitStoreIcon{float: left;background:#fff;padding:4px 6px;border-radius:3px;margin-left: 10px;}
+.customStoreIcon{font-size: 1.4em !important;color: #c60309 !important;float: right;margin-left: 7px;text-align: right;}
+.favStoreDetails{width:69% !important;}
+.visitStoreTxt{float: left;color: #c60309 !important;font-size:1em !important;font-weight: 600;margin-left:7px;}
+
+.makeFavoriteStoreDivNew {
+    float:left;
+    width: 20px;
+    height: 20px;
+}
+.favoriteUnfavoriteTxt{float: left;color: #c60309 !important;font-size: 0.8em !important;margin-left: 7px;font-weight: 600;}
+.customFavStoreIconNew {
+    font-size: 1.2em!important;
+    color: #c60309;
+    float: right;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+}
+.customVisitStoreIconNew {
+    font-size: 1.2em!important;
+    color: #c60309;
+    float: left;
+    margin: 0px 0px 0px;
+    text-align: right;
+}
+
+.customFavStoreIconNew1 {
+    font-size: 1.2em!important;
+    color: #c60309;
+    float: left;
+    position: absolute;
+    visibility: hidden;
+    left: 7px;
+    top: 4px;
+}
+
+
+
+.makeFavoriteStoreDivNew input {
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+}
+
+.makeFavoriteStoreDivNew input:checked + .customFavStoreIconNew1 {
+    visibility: visible;
+}
+/*fav store new ends*/
+
+.addStoreButtonFav{float:left !important;margin:20px 0px !important;background:#ececec !important;padding:6px 0px !important;color:#c60309 !important;font-size:1.4em !important;text-align:center !important;width:100% !important;}
+.addStoreButtonFavStore{float:right;padding:6px 5px;background:#fff;color:#c60309;font-size: 1em;font-weight: 100;text-indent:0px !important;z-index:99999999;width:94%;text-align:center;margin: 15px 3% 0px 3%;}
+.addFavBrandsButton{float: right;padding: 3px 5px;background: #c60309;color: #fff;font-size: .7em!important;font-weight: 100;margin: -3px 10px 0 0;text-indent: 0!important;}
+
+.favStoreTxt {
+    float: left;
+    font-size: 1.5em;
+    color: #c60309;
+    width: 100%;
+    margin-top: 2px;
+    text-decoration: none;
+    padding-bottom: 1px;
+    text-align: left;
+    font-weight: bold;
+	text-indent:10px;
+}
+
+/*store view user fav options start*/
+.storeFavOptionCheckUncheck{float:left;color:#c60309;background:#fff;padding:4px 6px 2px;border-radius:2px;position:relative;}
+.storeMakeFaveDiv {float:left;width: 20px;height: 20px;}
+.storeFavOptionTxt{float: left;color: #c60309 !important;font-size: 0.9em !important;margin-left: 7px;font-weight: 100;}
+.storeMakeFaveDiv input {width: 100%;height: 100%;float: left;opacity: 0;position: absolute; z-index: 999;top: 0px;right: 0px;}
+.storeMakeFaveDiv input:checked + .customStoreFavIconNew1 {visibility: visible;}
+.customStoreFavIconNew {font-size: 1.2em!important;color: #c60309;float: right;margin: 0px 0px 0px 0px;text-align: right;}
+
+.customStoreFavIconNew1 {font-size: 1.2em!important;color: #c60309;float: left;position: absolute;visibility: hidden;left: 9px;top: 4px;}
+/*store view user fav options ends*/
+
+/*new fav store modal starts*/
+.favStoresListNew{width:27%;float:left;position:relative;margin: 0px 3% 15px;}
+.storeIconNdiv{width:100%;float:left;border-radius:5px;position:relative;box-shadow: 0px 0px 2px rgba(0,0,0,0.3);}
+.favoriteStoreDivNew{position:absolute;right:0px;top:0px;width:100%;height:100%;float:left;}
+.storeListImage{width:100%;float:left;height:auto;border-radius:5px;}
+.customFavStoreNew {font-size: 1.2em!important;color: #c60309; float: right; margin: 0px 0px 0px 0px;text-align: right;}
+.customFavStoreNew1 {font-size: 2em!important;float: left;position: absolute;visibility: hidden;left: 0px; top: 0px;width:100%;height:100%;background:rgba(0,0,0,0.5);text-align:center;border-radius:5px;color:#fff;line-height:90px !important;}
+.favoriteStoreDivNew input {width: 100%;height: 100%; float: left;opacity: 0;position: absolute;z-index: 999;top: 0px;right: 0px;}
+.favStoreOverlay{width:100%;height:100%;visibility: hidden;position:absolute;top:0px;left:0px;}
+.favoriteStoreDivNew input:checked + .customFavStoreNew1 {visibility: visible;}
+
+/*new fav store modal ends*/
+
+/*form elements ends*/
+.tooltip {position: absolute;z-index: 1;left: -9999px;padding: 2px 8px 3px;font-size: 14px;line-height: 16px;font-weight: 400;background: rgba(39,146,255,.9);color: #fff;opacity: 0;transition: margin 0.3s, opacity 0.3s;-o-transition: margin 0.3s, opacity 0.3s;-ms-transition: margin 0.3s, opacity 0.3s;-moz-transition: margin 0.3s, opacity 0.3s;-webkit-transition: margin 0.3s, opacity 0.3s;}
+.tooltip:after {content: '';position: absolute;}
+input:focus + .tooltip, textarea:focus + .tooltip {opacity: 1;}
+
+.tooltip-top-right {bottom: 100%;margin-bottom: 15px;}
+.tooltip-top-right:after {top: 100%;right: 16px;	border-top: 4px solid rgba(39,146,255,.9);border-right: 4px solid transparent;border-left: 4px solid transparent;}
+input:focus + .tooltip-top-right, textarea:focus + .tooltip-top-right {right: 0;left: auto;margin-bottom: 5px;}
+.tooltip-top-left {bottom: 100%;margin-bottom: 15px;}
+.tooltip-top-left:after {top: 100%;left: 16px;border-top: 4px solid rgba(39,146,255,.9);border-right: 4px solid transparent;border-left: 4px solid transparent;}
+input:focus + .tooltip-top-left,
+textarea:focus + .tooltip-top-left {right: auto;left: 0;margin-bottom: 5px;}
+.tooltip-right {top: 9px;white-space: nowrap;margin-left: 15px;}
+.tooltip-right:after {top: 6px;right: 100%;border-top: 4px solid transparent;border-right: 4px solid rgba(39,146,255,.9);border-bottom: 4px solid transparent;}
+input:focus + .tooltip-right,textarea:focus + .tooltip-right {left: 100%;margin-left: 5px;}
+.tooltip-left {top: 9px;white-space: nowrap;margin-right: 15px;}
+.tooltip-left:after {top: 6px;left: 100%;border-top: 4px solid transparent;border-bottom: 4px solid transparent;border-left: 4px solid rgba(39,146,255,.9);}
+input:focus + .tooltip-left,textarea:focus + .tooltip-left {right: 100%;left: auto;margin-right: 5px;}
+.tooltip-bottom-right {top: 100%;margin-top: 15px;}
+.tooltip-bottom-right:after {bottom: 100%;right: 16px;	border-right: 4px solid transparent;border-bottom: 4px solid rgba(39,146,255,.9);border-left: 4px solid transparent;}
+input:focus + .tooltip-bottom-right,
+textarea:focus + .tooltip-bottom-right {right: 0;left: auto;margin-top: 5px;}
+
+.tooltip-bottom-left {top: 100%;margin-top: 15px;}
+.tooltip-bottom-left:after {bottom: 100%;left: 16px;border-right: 4px solid transparent;border-bottom: 4px solid rgba(39,146,255,.9);border-left: 4px solid transparent;}
+input:focus + .tooltip-bottom-left,textarea:focus + .tooltip-bottom-left {right: auto;left: 0;margin-top: 5px;}
+/*form tooltip ends*/
+
+/*static pages main starts*/
+.staticPagesMainContainer{width:94%;margin:10px 2%;padding:5px 2%;}
+.termsNconditionsMain{width:100%;}
+.staticPageHeading{width:100%;float:left;font-size:24px;color:#c60309;border-bottom:1px solid #c60309;text-shadow:1px 0px 1px rgba(0,0,0,0.2);margin-bottom:15px;}
+.staticPageSubHeading{width:100%;float:left;font-size:20px;color:#c60309;text-shadow:1px 0px 1px rgba(0,0,0,0.2);margin-bottom:15px;line-height:25px;}
+.staticPageContent{width:100%;float:left;font-size:16px;margin-bottom:15px;text-align:justify;line-height:25px;color:#3c3c3c;}
+.staticPageUl{width:100%;float:left;margin-bottom:15px;}
+.staticPageUl:last-child{margin-bottom:0px;}
+.staticPageLi{width:94%;margin-left:20px;list-style-image:url(../images/listIcon.png);list-style-type:circle !important;margin-bottom:10px;}
+.staticPageLi:last-child{margin-bottom:0px;}
+.staticPageLiTxt{width:100%;font-size:16px;text-align:justify;line-height:25px;color:#3c3c3c;}
+/*static pages main ends*/
+
+.discalimerTxt1{font-size: 1em;color: #fff;text-shadow: 0 0 2px rgba(0,0,0,.9);float: left;margin:0px 0px 10px 0px;padding:0px 15px;}
+.discalimerTxt2{font-size: 1em;color: #fff;text-shadow: 0 0 2px rgba(0,0,0,.9);float: left;margin:0px 0px 15px 0px;padding:0px 15px;}
+
+/*
+ * Brand Details Page
+*/
+.brandDetailsTabs .tabs{position: relative !important;}
+
+.normal{white-space: normal !important;}
+
+.brandLevelLogoText{font-size: 2em; margin: 50px 0;line-height: 28px;}
+
+.brandLevelTabs .tabs{height: 41px;}
+
+/*fav brand and info starts*/
+.favBrandPicNinfo{width:70%;float:left;margin:30px 15% 15px;position: absolute;top: 0px;left: 0px;}
+.favBrandInfo {width: 100%;float: left;height: 250px;position: relative;}
+.favBrandProfilePic{width:150px;height:150px;float:left;position:relative;left:50%;margin-left:-75px;border-radius:120px;overflow:hidden;box-shadow:0px 2px 0px rgba(0,0,0,0.5);}
+.favBrandProfilePicImg{width:100%;height:100%;float:left;}
+.favBrandCoverPicInfo {width: 100%;float: left; height: 250px;position: relative;overflow: hidden;}
+.favBrandCoverPicImg {width: 100%;height: auto;min-height: 250px;float: left;}
+.favBrandCoverOverlay {width: 100%;height: 250px;float: left; position: absolute;top: 0px;left: 0px;background: rgba(198,3,9,0.8);}
+.favBrandInfoMain {width: 100%;float: right;}
+.brandNameTxt{font-size: 1.3em;color: #fff;font-weight: 600;width: 100%;float: left;margin: 20px 0px;text-align:center;text-shadow: 1px 1px 1px rgba(0,0,0,0.3);}
+
+.favBrandUnfavOptionMain{float:left;color:#c60309;background:#fff;padding:4px 6px 2px;border-radius:2px;position:relative;width:94px;left:50%;margin-left:-47px;left:50%;}
+/*fav brands and info ends*/
+
+/*verified or under verification starts*/
+.underVerificationBlock{float:left;width:100%;}
+.underVerificationTxt{font-size:1em;color:#fff;font-family:gothic;font-weight:600;}
+.underVerificationIcon{font-size:1.3em !important;color:#fff;margin-right:5px;float:left;margin-top:2px;}
+.verfiedIcon{font-size:1.3em !important;color:#fff;margin-right:5px;float:left;margin-top:2px;}
+.inactiveIcon{font-size:1.3em !important;color:#fff;margin-right:5px;float:left;margin-top:2px;}
+/*verified or under verification ends*/
+
+/*hamburger menu styling starts*/
+.hamburgerUserProfile{float:left;width:100%;background:#730000;padding:20px;}
+.hamburgerProfileImage{width:130px;height:130px;position:relative;left:50%;margin-left:-65px;border-radius:100%;border:5px solid #fff;overflow:hidden;box-shadow:1px 3px 3px rgba(0,0,0,0.5);}
+.hamburgerProfileImg{float:left;width:100%;}
+.hamburgerProfileName{float:left;margin:15px 0px 12px;width:100%;text-align:center;color:#fff;font-size:1.5em;font-weight:600;text-shadow:1px 1px 1px rgba(0,0,0,0.4);}
+.hanburgerProfileButtonsMain{float:left;width:100%;}
+.hanburgerProfileButtonsInner{width:210px;float:left;position:relative;left:50%;margin-left:-105px;}
+.hanburgerProfileButtons{padding:5px 10px;border-radius:4px;float:left;font-size:1.2em;color:#730000;font-size:600;}
+.hanburgerProfileButtons:first-child{margin-right:10px;}
+.profileButton{background:#00e926;}
+.settingsButton{background:#fff;}
+.hamburgerMenuLinks{float:left;width:100%;}
+.hamburgerMenuLinksUl{width:100%;}
+.hamburgerMenuLinksLi{float:left;width:100%;padding:15px 0px;}
+.hamburgerMenuLinksLi:nth-child(odd){background:#222222;}
+.hamburgerMenuLinksLi:nth-child(even){background:#272727;}
+.hamburgerMenuLinksIcon{color:#fff;font-size:1.7em !important;margin:0px 20px;float:left;width:25px;}
+.hamburgerMenuLinksTxt{color:#fff;float:left;font-size:1.3em;}
+.mapMargin{text-indent:5px;}
+.hamburgerSignUp{float:left;padding:15px;background:#730000;width:100%;}
+.signUpHeadingHamburger{width:100%;float:left;text-align:center;font-size:1.5em;font-weight:600;text-shadow:1px 2px 2px rgba(0,0,0,0.5);margin-bottom:10px;color:#fff;}
+.signUpIconNtextHamburger{float:left;width:100%;}
+.signUpIconHamburger{float:left;width:100%;color:#fff;text-align:center;font-size:4em !important;margin:10px 0px;}
+.signUpTxtHamburger{float:left;text-align:center;color:#fff;}
+.signUpButtonHamburger{width:100%;float:left;color:#730000;background:#00e926;padding:8px 0px;text-align:center;border-radius:5px;margin-top:10px;}
+/*hamburger menu styling ends*/
+
+/*category filter starts*/
+.categoryFilter{padding:15px 0px;}
+.catFilterUl{width:100%;margin-bottom:80px;}
+.categoryFilterMain{width:92%;padding:6px 0px;background:#fff;margin:0px 4% 1px;}
+.iconFilter{text-indent:15px;}
+.categoryFilterTxt{text-indent:15px;color:#222;font-size:1em;font-weight:600;}
+/*category filter ends*/
+
+/*category filter new starts*/
+.categoryFilerMain{width:100%;position:relative;}
+.categoryFilterSingleMain{width:100%;float:left;height:130px;position:relative;overflow:hidden;}
+.categorySingleImage{width:100%;float:left;height:130px;overflow:hidden;}
+.categorySingleImageImg{width:100%;float:left;min-height:130px;}
+.categoryFilterInfo{width:100%;float:left;height:100px;position:absolute;left:0px;top:0px;background: rgba(33,33,33,1);background: -moz-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(0,0,0,0) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,33,33,1)), color-stop(100%, rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(0,0,0,0) 100%);background: -o-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(0,0,0,0) 100%);background: -ms-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(0,0,0,0) 100%);background: linear-gradient(to bottom, rgba(33,33,33,1) 0%, rgba(0,0,0,0) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#000000', GradientType=0 );}
+.categoryFilterTitleTxt{width:100%;float:left;text-indent:15px;margin:15px 0px 7px 0px;font-size:1.6em;font-weight:600;color:#fff;}
+.categoryFilterInfoTxt{width:100%;float:left;text-indent:15px;margin:0px 0px 10px 0px;font-size:1.2em;font-weight:600;color:#fff;}
+/*category filter new ends*/
+
+/*locality filter new starts*/
+.localityListMain{width:100%;position:relative;}
+.localityListSingle{float:left;width:100%;border-bottom:1px solid #a3a3a3;background:#fff;padding:15px 0px;}
+.locationListName{float:left;width:100%;text-indent:15px;color:#222;font-size:1.2em;font-weight:600;}
+/*locality filter new ends*/
+
+/*version intro starts*/
+.versionBg{background:url('../images/versionBg.jpg') repeat;}
+.versionContentHolder{width:100%;padding:20px;float:left;}
+.versionHeadingTxt{font-family:BebasNeuewebfont !important;font-size:2.5em;text-align:center;line-height:35px;margin-bottom:5px;}
+.versionContentTxt{font-size:1.2em;text-align:center;line-height:24px;position:relative;z-index:9;}
+.versionBgInner{width:100%;position:fixed;float:left;bottom:0px;}
+.versionBgMainImg{width:100%;position:absolute;left:0px;bottom:0px;}
+/*version intro ends*/
+
+@media (min-width: 600px) {
+
+.splashLogoNContainer{height:65%;}
+.statisticsContainer{height:35%;}
+.welcomeSplashTxt{font-size:2.3em;}
+.welcomeSplashTxt{bottom:32%;}
+
+.mainStatistics {margin-top: 10%;}
+
+.statisticsMainP { font-size: 1.5em;margin-bottom: 30px;}
+.getStartedButton {font-size: 1.6em;padding: 8px 0px;}
+
+.intoNavigationBubbleUl{width:80px;margin-left:-40px;}
+.circleIntro{font-size:1.5em !important;}
+
+.categoryIntroHeading{font-size:1.8em;margin: 30px 10% 5px;}
+.categoryIntroTxt{font-size:1.2em;line-height:30px;margin: 15px 5%;}
+.categoryIntroButton{font-size: 1.2em;font-weight:600;padding:8px 0px;}
+.checkbox{left: 94% !important;}
+.continueWithSelection{font-size:1.2em;}
+.bar{border:0px !important;}
+.bar .button{font-size:16px;}
+
+.dealListingDetails{width:72%;}
+.dealTitleTxt{margin:15px 0px 10px 0px;font-size: 1.4em;}
+.dealTitleAnalyticsTxt1{margin:15px 0px 10px 0px;font-size: 1.8em;}
+.dealLocationTxt{font-size: 1.1em;margin-top:5px;}
+.dealImpressionsTxt{font-size:1em;}
+.dealSavesTxt{font-size:1em;}
+.dealSharesTxt{font-size:1em;}
+.dealCheckinTxt{font-size:1em;}
+.dealReportsTxt{font-size:1em;}
+.dealAnalyticsInner{margin-top:10px;}
+.dealAnalyticsMainInner{width:75%;float:left;padding: 0px 15px 0px 0px;}
+.activeOrInactive{font-size:1.2em;padding:6px 12px;margin-top:5px;}
+.upgraDealButton{font-size:1.2em;padding:6px 12px;margin-top:5px;}
+
+.dealStoreTxt{font-size: 1.1em;margin-top:5px;}
+.dealListingArrow{top:45px;}
+.nofavStoreImage{width:260px;margin:20px 0px 20px -130px;}
+.noFavStoreHeading{font-size:1.5em;}
+.noFavStoreTxt{font-size:1.2em;margin: 15px 5% 25px;line-height:30px;}
+.favStoresMain button{font-size:1.5em;}
+.favStoresListNew{width: 16%;margin: 0px 2% 15px;}
+.addStoreButtonFavStore{font-size:1.5em;padding:10px 5px;}
+.selectButtonMain{height:70px;}
+.dealDetailImageContainer{height:300px;}
+.dealDetailImage{height:300px;}
+.dealHeadingTxt{font-size:1.7em;}
+.dealHeading{padding:15px 0px;}
+.storeDealImage{height:80px;width:80px;margin: 3px 20px 20px 20px;}
+.storeNameDealTxt{font-size:1.8em;}
+.storeDescriptionDealTxt{font-size:1.5em;margin-top: 18px;}
+.dealMainDetailTxt{font-size:1.3em;}
+.discalimerTxt1{font-size:1.3em;}
+.dealValidity{font-size:1.3em;}
+.colDealDeatilOptions{font-size:1.3em;padding:10px 15px;}
+.callBusinessTxtA{font-size: 1.3em;padding: 10px 15px;}
+.callBusinessTxt{font-size: 1.3em;padding: 10px 15px;}
+.dealContactDetailsInner{padding:15px 15px;}
+.dealContactHeading{font-size:1.5em;margin-bottom: 15px;}
+.dealContactAddressTxt{font-size:1.3em;}
+.dealContactNumberTxt{font-size:1.3em;width:48%;}
+.dealContactMailIdTxt{font-size:1.3em;}
+.userOptionsRow{width:40%;margin: 0px 0% 10px;}
+.userOptionsRow:first-child{width:40%;margin: 0px 8% 10px 7%;}
+.userProfilePicNinfo{top:10%;}
+.userNameTxt{font-size:1.5em;}
+.userNumber{font-size:1.2em;}
+.userWelcomeTxt{padding:15px;font-size:1.6em;}
+.userOptionsMain{margin-bottom:20px;}
+.noteHeading{font-size:1.4em;}
+.noteInfoTxt{font-size:1em;}
+.karmaPointsEarnedNvalue{margin:8% 5% 0px}
+.karmaPointsMedal{right:25px;}
+.customTrophyIcon{font-size:2.5em;}
+.merchantProfileInfoMain{width:78%;margin-top:5%;}
+.merchantProfilePic{width:100px;height:100px;margin-top:70px;}
+.merchantProfileInfo{height:250px;}
+.merchantCoverPicInfo{height:250px;}
+.merchantCoverPicImg{height:250px;}
+.merchantCoverOverlay{height:250px;}
+.merchantNameTxt{font-size:1.8em;margin-bottom:15px;}
+.merchantAddressTxt{font-size:1.2em;margin-bottom:10px;}
+.merchantNumber{font-size:1.2em;margin-bottom:10px;}
+.underVerificationTxt{font-size:1.3em;}
+.merchantWelcomeTxt{font-size:1.8em;padding:20px 0px;}
+.verficationMerchTxt{line-height:25px;}
+.amAtStore{font-size:1.1em;margin: -3px 0px 0px 10px;}
+.dealCarouselMain{height:280px;}
+.dealCarouselImageHolder{height:280px;}
+}
+
+@media (min-width: 800px) {
+.categoryIntroHeading{font-size:1.8em;margin: 30px 10% 5px;}
+.categoryIntroTxt{font-size:1.2em;line-height:28px;margin: 15px 5%;}
+.categoryIntroButton{font-size: 1.2em;font-weight:600;padding:8px 0px;}
+.checkbox{left: 94% !important;}
+.continueWithSelection{font-size:1.2em;}
+.bar{border:0px !important;}
+.bar .button{font-size:16px;}
+.dealForm{width:89%;}
+.dealListingArrow{top:45px;}
+.dealTitleTxt{margin:15px 0px 6px 0px}
+}

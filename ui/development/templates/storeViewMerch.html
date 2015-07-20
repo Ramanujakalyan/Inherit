@@ -1,0 +1,123 @@
+<ion-view>
+	<ion-content class='has-footer'>
+		<div class="merchantProfileMain">
+			<div class="merchantProfileInfo">
+				<div class="merchantCoverPicInfo">
+					<img src="{{store.imageUrl}}" alt="" class="merchantCoverPicImg" />
+					<div class="merchantCoverOverlay">&nbsp;</div>
+				</div>
+				<div class="merchantProfilePicNinfo">
+					<div class="merchantProfilePic">
+						<img ng-src="{{store.logoUrl}}" alt="" class="merchantProfilePicImg" />
+					</div>
+					<div class="merchantProfileInfoMain">
+						<p class="merchantNameTxt">{{store.displayName}}</p>
+						<p class="merchantAddressTxt">{{store.address}}</p>
+						<p class="merchantNumber" ng-href="tel: {{store.phone}}" ng-show="displayNumber">Phone Number: <span class="merchantNumberJSN">{{store.phone}}</span></p>
+						<!--<p ng-show="stat" class="merchantNumber">{{merchantStatus}}</p>-->
+						<div class="underVerificationBlock" ng-show="underVerification">
+							<p class="underVerificationTxt"><i class="fa fa-exclamation-circle underVerificationIcon"></i><span class="verficationMerchTxt">Under Verification</span></p>
+						</div>
+						<div class="underVerificationBlock" ng-show="verified">
+							<p class="underVerificationTxt"><i class="fa fa-check-circle verfiedIcon"></i><span class="verficationMerchTxt">Verified</span></p>
+						</div>
+						<div class="underVerificationBlock" ng-show="inactive">
+							<p class="underVerificationTxt"><i class="fa fa-times-circle inactiveIcon"></i><span class="verficationMerchTxt">Inactive</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="welcomeMerchantOption">
+				<p class="merchantWelcomeTxt">Welcome {{store.displayName}}</p>
+			    <div class="merchantOptionsMain" ng-show="hasFavDeals">
+					
+				<div class="merchIntroMain">
+					<ion-slide-box class="" show-pager="false">
+						<ion-slide>
+							<div class="merchIntroSingle">
+								<p class="merchIntroHeading">Reach Local Consumers</p>
+								<div class="merchIntroImage">
+									<i class="icon ion-compose composeIconIntro" ui-sref="merch.postADeal"></i>
+								</div>
+								<p class="merchIntroDescription">Post a deal by clicking on the above icon.<br /> Deals are reviewed and published every day, Consumers recieve periodic notifications.</p>
+								<div class="merchIntroDots">
+									<ul class="merchIntroDotsUl">
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot activeDotIntro"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+									</ul>
+								</div>
+							</div>
+						</ion-slide>
+						<ion-slide>
+							<div class="merchIntroSingle">
+								<p class="merchIntroHeading">View Deal Analytics</p>
+								<div class="merchIntroImage">
+									<i class="icon ion-stats-bars composeIconIntro"></i> 
+								</div>
+								<p class="merchIntroDescription">Deal Analytics are powerful tools that help you track deal activity such as Save, Share, Store Visit's &amp Purchases. This helps you find which deals are popular.</p>
+								<div class="merchIntroDots">
+									<ul class="merchIntroDotsUl">
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot activeDotIntro"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+									</ul>
+								</div>
+							</div>
+						</ion-slide>
+						<ion-slide>
+							<div class="merchIntroSingle">
+								<p class="merchIntroHeading">Manage My Deals</p>
+								<div class="merchIntroImage">
+									<i class="icon ion-pricetags composeIconIntro"></i> 
+								</div>
+								<p class="merchIntroDescription">Use Manage my deals to end a deals, change its duration or even upgrading to a premium spot.</p>
+								<div class="merchIntroDots">
+									<ul class="merchIntroDotsUl">
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot activeDotIntro"></i></li>
+										<li class="merchIntroDotsLi"><i class="fa fa-circle customMerchIntroDot"></i></li>
+									</ul>
+								</div>
+							</div>
+						</ion-slide>
+						<ion-slide>
+							<div class="merchIntroSingle">
+								<p class="merchIntroHeading">Ready to reach customers?</p>
+								<div class="merchIntroImage">
+									<i class="icon ion-compose composeIconIntro"></i> 
+								</div>
+								<p class="merchIntroDescription">Unleash the power of Madzz, and increase sales. IT'S FREE!</p>
+								<p class="postFirstDealButton" ui-sref="merch.postADeal">Post your first Deal</p>
+							</div>
+						</ion-slide>
+					</ion-slide-box>
+				</div>
+			    </div>
+			</div>
+			
+			<div ng-repeat="deal in dealsList" ui-sref="merch.merchDealDetails({dealId : deal.dealId})" ng-show="favDealsList">
+				<ion-item class="item-icon-right redBg noPadding" ng-class="{active: isGroupShown(deal)}" ng-class-even="'lightRedBg'">
+					<div class="dealImageNShadow">
+						<div class="dealShadowListing">
+							<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg">
+						</div>
+						<div class="dealImageListing">
+							<img ng-src="{{deal.logoUrl}}" alt="" class="dealImgListing">
+						</div>
+					</div>
+					<div class="dealListingDetails">
+						<p class="dealTitleTxt">{{deal.title}}</p>
+						<p class="dealLocationTxt">{{deal.displayName}}</p>
+						<p class="dealStoreTxt">Valid Till: {{deal.validTo}}</p>
+					</div>
+					<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+				</ion-item>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

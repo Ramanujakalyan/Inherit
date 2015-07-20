@@ -1,0 +1,30 @@
+<ion-view>
+	<div class="selectButtonMain">
+		<span class="addStoreButtonFavStore" ng-click="postFavData()">Done Selection</span>
+	</div>
+	<style>
+		.dealForm{width: 74%;}
+		@media (min-width: 600px) {
+			.dealForm{width: 94%;}
+		}
+	</style>
+	<ion-content style="background:#6E0000;">
+	
+    <ul class="favStoresListUl1">
+		<li class="favStoresListNew" ng-repeat="brand in brandsList | orderBy: brand.name">
+			<div class="storeIconNdiv">
+				<div class="favoriteStoreDivNew">
+					<input type="checkbox" class="hiddenCatCheckBox" ng-model="brand.checked" />
+					<i class="fa fa-heart customFavStoreNew1"></i>
+					<div class="favStoreOverlay">&nbsp;</div>
+				</div>
+				<img src="{{brand.logoUrl}}" class="storeListImage" alt="" />
+			</div>
+		</li>
+		<div class="clear"></div>
+       </ul>
+		<ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c">
+	  
+		</ion-infinite-scroll>
+   </ion-content>
+</ion-view>

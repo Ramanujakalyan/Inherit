@@ -1,0 +1,34 @@
+<ion-view>
+    <div class="bar bar-header action-bar-gradient item-input-inset">
+		<img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="" ui-sref="deals.yourDeals" />
+    </div>
+   
+    
+		
+			
+                                        <div class="formStep">
+			
+				       <button ng-click="showStores()" >SHOW MY STORES</button>
+                                          <!---button ng-click="showStores()" >SHOW MY STORES</button--->
+					  </div>
+		 <form novalidate name="mrchVld" ng-init="estBlur=false;dispNameBlur=false;emailBlur=false;phoneBlur=false;streetBlur=false;pinBlur=false;">
+			<div class="userSignUpMainBlock">
+				<div class="universalFormMain" style="margin-top:15px;">
+                                        <div class="formStep">
+                  
+                    <TABLE border="2", style="width:100%">
+
+                   <TR ng-repeat = "store in storeList"> 
+                     <TD width=12%> <p ng-click = editIt()> edit </p> </TD>
+                       <TD width=30%>{{store.displayName}}</TD>
+                         <TD width=33%>{{store.address}}</TD> 
+                           <TD width=15%>{{store.phone}}</TD> 
+                              <TD width=10%>{{store.pincode}}</TD>
+                    </TR>
+                    </TABLE>	
+		    </div>
+	        </ion-content>
+		</ion-view>
+
+
+

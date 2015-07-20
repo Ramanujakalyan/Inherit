@@ -1,0 +1,67 @@
+<style>
+ @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+opacity:0;  /* make things invisible upon start */
+-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+-moz-animation:fadeIn ease-in 1;
+animation:fadeIn ease-in 1;
+
+-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+-moz-animation-fill-mode:forwards;
+animation-fill-mode:forwards;
+
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+animation-duration:1s;
+}
+
+
+.see{
+text-align:center;
+
+
+}
+
+
+.box{
+width: 280px;
+height: 60px;
+position: relative;
+margin: 10px;
+padding: 20px;  
+float: left;
+border: 1px solid #333;
+background: #999;
+
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+</style>
+<div ng-controller="HomeController">
+
+<div style="height: 250px; background-color: grey">
+<h4><center>Activity</center></h4>
+<div ng-include src="'templates/loading.html'"></div>
+<div ng-repeat="activities in activity | limitTo : 3 track by $index" class ="fade-in">
+<p class="box">
+  {{activities}}
+</p>
+
+
+
+</div>
+</div>
+<div class="see">
+<p align="center">
+  <input type="button" value="See more" /> <!---Shop now should be across the offers-->
+</p>
+</div>
+<hr style="width: 100%;"/>
+</div>

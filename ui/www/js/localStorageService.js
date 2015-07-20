@@ -1,0 +1,1 @@
+var LocalStorageService=angular.module("LocalStorageService",[]);LocalStorageService.service("LocalStorageService",["$window","$q",function(e){return{set:function(o,r){e.localStorage[o]=r},get:function(o,r){return e.localStorage[o]||r},setObject:function(o,r){e.localStorage[o]=JSON.stringify(r)},getObject:function(o){return JSON.parse(e.localStorage[o]||"{}")}}}]);

@@ -1,0 +1,45 @@
+<ion-view>
+<style>
+.dealTitleTxt{margin-top:12px !important;}
+</style>
+	<ion-content class="has-footer">
+		<div class="favBrandInfo">
+			<div class="favBrandCoverPicInfo">
+				<img ng-src="{{::brand.imageUrl}}" alt="" class="favBrandCoverPicImg">
+				<div class="favBrandCoverOverlay">&nbsp;</div>
+			</div>
+			<div class="favBrandPicNinfo">
+				<div class="favBrandProfilePic">
+					<img ng-src="{{::brand.logoUrl}}" alt="" class="favBrandProfilePicImg">
+				</div>
+				<div class="favBrandInfoMain">
+					<p class="brandNameTxt">{{::brand.brandName}}</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="postAdealHeading">
+			<p class="postAdealTxt">Stores around you</p>
+		</div>
+
+		<div ng-repeat="brand in favBrands" ui-sref="deals.storeViewBrand({'store':brand.mid})">
+			<ion-item class="item item-avatar redBg noPadding" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{::brand.logoUrl}}" alt="" class="dealImgListing" />
+					</div>
+				</div>
+				<div class="dealListingDetails favStoreDetails">
+					<p class="dealTitleTxt">{{::brand.displayName}}</p>
+					<p class="dealLocationTxt">{{::brand.address || brand.mallName}}</p>
+					<p class="dealStoreTxt">Distance: {{::brand.distance | limitTo: 4}} miles</p>
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow favBrandShadow" />
+			</ion-item>
+		</div>
+	
+	</ion-content>
+</ion-view>

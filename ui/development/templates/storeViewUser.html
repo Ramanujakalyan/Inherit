@@ -1,0 +1,61 @@
+<ion-view>
+<style>
+.dealTitleTxt{margin-top:12px !important;}
+</style>
+	<ion-content>
+		<div class="merchantProfileMain">
+			<div class="merchantProfileInfo">
+				<div class="merchantCoverPicInfo">
+					<img src="{{store.imageUrl}}" alt="" class="merchantCoverPicImg">
+					<div class="merchantCoverOverlay">&nbsp;</div>
+				</div>
+				<div class="merchantProfilePicNinfo">
+					<div class="merchantProfilePic">
+						<img ng-src="{{store.logoUrl}}" alt="" class="merchantProfilePicImg">
+					</div>
+					<div class="merchantProfileInfoMain">
+						<p class="merchantNameTxt">{{store.name}}</p>
+						<p class="merchantAddressTxt">{{store.address}}</p>
+
+						<div class="callBusinessIconNtxt" ng-show="callBusiness">
+							<i class="fa fa-phone customFavStoreIconStoreMain"></i>
+							<a class="favotiteStoreTxt" ng-href="tel:{{store.phone}}" style="text-decoration:none">Call Business</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="welcomeMerchantOption" ng-show="hasStoreDeals">
+				<p class="merchantWelcomeTxt">Deals from this store</p>
+			</div>
+		</div>
+		<div ng-show="doesntHasStoreDeals">
+			<div class="favStoresMain">
+				<div class="noFavStoreFound">
+					<div class="nofavStoreImage">
+						<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+					</div>
+					<p class="noFavStoreHeading">No deals under this store!!</p>
+					<p class="noFavStoreTxt">We couldn't find any deals under this store. When there is a deal running it will be displayed. Thank you!</p>
+				</div>
+			</div>
+		</div>
+		<div ng-repeat="deal in dealsList" ui-sref="deals.details({dealId : deal.dealId})" ng-show="hasStoreDeals">
+			<ion-item class="item-icon-right redBg noPadding" ng-class="{active: isGroupShown(deal)}" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg">
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{deal.logoUrl}}" alt="" class="dealImgListing">
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleTxt">{{deal.name}}</p>
+					<p class="dealLocationTxt">{{deal.bDisplayName}}</p>
+					<p class="dealStoreTxt">Valid Till: {{deal.validTo}}</p>
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+			</ion-item>
+        </div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,83 @@
+<ion-scroll direction="y" style="height: 300px; background-color: grey">
+<h4><center>Offers Near You</center></h4>
+<style>
+.area{
+text-align:center;
+
+}
+
+.bu{
+margin-top:0.5%;
+margin-right:5%;
+
+
+}
+
+.Sno{
+margin-left:5%;
+width:30%;
+}
+
+.dist{
+width:30%;
+margin-left:10%;
+}
+
+
+</style>
+
+<div class="area">
+<select>
+  <option value="JayaNagar">JayaNagar</option>
+  <option value="Kormangala">Kormangala</option>
+  <option value="HsrLayout">HsrLayout</option>
+  <option value="IndiraNagar">IndiraNagar</option>
+</select>
+</div>
+<div class="header">
+<div class="bar bar-header action-bar-gradient item-input-inset"> 
+<p> Categories will come here</p>
+<p> OFFERS STORES MALLS </p><!--If we click that displays the respective actions near you-->
+
+</div> 
+</div>
+
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    
+<div class="Img">
+<p> Map Image will come here-IMAGE </p>
+</div/>
+
+<br>
+<div class="Sno">
+<p>1.AdidasOriginals</p>
+<p>3kms</p>
+
+<p>2.Zen Food Bar</p>
+<p>2kms</p>
+</div>
+
+<div class="bu">
+<p align="right">
+  <input type="button" value="Shop now" />
+</p>
+</div>
+
+
+
+  </ion-slide>
+ 
+  
+</ion-slide-box>
+
+
+
+
+
+
+
+</ion-scroll>
+<hr style="width: 100%;"/>
+
+

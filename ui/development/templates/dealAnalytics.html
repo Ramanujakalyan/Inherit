@@ -1,0 +1,58 @@
+<ion-view>
+	<ion-content>
+		<p class="manageDealsHeading" ng-show="favDealsList">Deal Analytics</p>	
+		<div ng-show="hasFavDeals">
+		    <div class="favStoresMain">
+				<div class="noFavStoreFound">
+				    <div class="nofavStoreImage">
+						<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+				    </div>
+				    <p class="noFavStoreHeading">We haven't found any deals to display Analytics</p>
+				    <p class="noFavStoreTxt">Deal Analytics are powerful tools that help you track deal activity such as Save, Share, Store visits &amp Purchases.</p>
+				</div>
+				<button class="button button-block button-assertive" ui-sref="merch.postADeal">Post your first deal</button>
+		    </div>
+		</div>
+	
+		<div class="earlierDealsMain" ng-show="favDealsList">
+			<div class="dealSingle" ng-repeat="analytic in analyticsList">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{analytic.logoUrl}}" alt="" class="dealImgListing" />
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleAnalyticsTxt1">{{analytic.title}}</p>
+				</div>
+				<div class="dealAnalyticsMainInner">
+					<div class="dealAnalyticsInner">
+						<div class="dealImpressionsMain">
+							<p class="dealImpressionsNumber">{{analytic.userImpressions}}<i class="fa fa-bolt impressionsIconCustom"></i></p>
+							<p class="dealImpressionsTxt">Impression</p>
+						</div>
+						<div class="dealSavesMain">
+							<p class="dealSavesNumber">{{analytic.userSaves}}<i class="fa fa-heart savesIconCustom"></i></p>
+							<p class="dealSavesTxt">Save</p>
+						</div>
+						<div class="dealSharesMain">
+							<p class="dealSharesNumber">{{analytic.userShares}}<i class="fa fa-share-alt sharesIconCustom"></i></p>
+							<p class="dealSharesTxt">Share</p>
+						</div>
+						<div class="dealCheckinMain">
+							<p class="dealCheckinNumber">{{analytic.userCheckins}}<i class="fa fa-map-marker checkinIconCustom"></i><i class="fa fa-check checkIconCustom"></i></p>
+							<p class="dealCheckinTxt">Checkin</p>
+						</div>
+						<div class="dealReportsMain">
+							<p class="dealReportsNumber">{{analytic.userPurchase}}<i class="fa fa-thumbs-up reportsIconCustom"></i></p>
+							<p class="dealReportsTxt">Bought</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

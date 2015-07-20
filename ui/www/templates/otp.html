@@ -1,0 +1,29 @@
+<style>
+.popup{background:#55509d !important;height:240px !important;}
+.popup-head{display:none !important;border:0 !important;}
+.popup-buttons{opacity:1 !important; width:100px !important;float:left !important;}
+.mainTitleOtp{font-family:gothic;font-size:1.2em;color:#fff;text-shadow:0px 0px 1px rgba(0,0,0,0.3);margin:10px 0px 6px !important;line-height:26px;width:100%;text-align:center;float:left;}
+.button-positive{background:#7ef316 !important;color: #55509d !important;}
+.subTitleOtp{font-family:gothic;margin-bottom:10px;font-size:0.8em;color:#fff;text-shadow:0px 0px 1px rgba(0,0,0,0.3);line-height: 14px !important;float: left;width:100%;float:left;text-align:center;}
+.textBoxPopUpOTP{padding:0px 15px !important;color:#55509d !important;font-family:gothic !important;font-size:1.2em !important;line-height:22px !important;height:40px !important;text-align:center !important;float:left !important;}
+::-webkit-input-placeholder {
+    color: #55509d !important;
+}
+.buttonFormOtp{position:absolute !important;right:10px;bottom:10px;background:#7ef316 !important;color: #55509d !important;font-family: gothic !important;font-size: 1.1em;height: 35px;padding: 0px 20px;border: none !important;border-radius:3px;}
+.messageOtp{width:100%;float:left;margin-top:10px;text-align:center;}
+
+.popup-buttons .button{position:absolute !important;left: 95px !important;bottom:10px;background:#fff !important;color: #55509d !important;font-family: gothic !important;font-size: 1.1em;height: 35px;padding: 0px 20px;border: none !important;min-height: 18px !important;}
+:-moz-placeholder {
+ /* Firefox 18- */
+    color: #55509d !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+    color: #55509d !important;
+}
+
+:-ms-input-placeholder {
+    color: #55509d !important;
+}
+</style><span class="mainTitleOtp">Madzz will send you a one time verification code by SMS.</span><br><span class="subTitleOtp">Depending on your carrier, it may take a few seconds.</span> <input type="number" ng-model="data.smscode" class="textBoxPopUpOTP" placeholder="Enter Verification Code"> <input type="submit" class="buttonFormOtp" value="Verify" ng-click="checkSMS($scope.data.smscode)"><p ng-hide="verified" class="messageOtp">Number Verified!!</p><p ng-hide="notVerified" class="messageOtp">Oops!! Wrong Key. Please Try Again</p>

@@ -1,0 +1,133 @@
+<!-- <ion-view>
+	<ion-content>
+		<div class="merchantProfileMain">
+			<div class="merchantProfileInfo">
+				<div class="merchantCoverPicInfo">
+					<img src="{{store.imageUrl}}" alt="" class="merchantCoverPicImg">
+					<div class="merchantCoverOverlay">&nbsp;</div>
+				</div>
+				<div class="merchantProfilePicNinfo">
+					<div class="merchantProfilePic">
+						<img ng-src="{{store.logoUrl}}" alt="" class="merchantProfilePicImg">
+					</div>
+					<div class="merchantProfileInfoMain">
+						<p class="merchantNameTxt">{{store.name}}</p>
+						<p class="merchantAddressTxt">{{store.address}}</p>
+						<p class="merchantNumber" ng-show="displayPhone">Phone Number: <span class="merchantNumberJSN">{{store.phone}}</span></p>
+						           
+						     <div class="storeFavOptionCheckUncheck">
+                            <div class="storeMakeFaveDiv">
+                                <input type="checkbox" class="hiddenCatCheckBox" id="checkbox" ng-value="store.mid" id="{{store.mid}}" ng-model="store.checked" ng-click="deselect($index, store.checked)"/>
+                                <i class="fa fa-heart customStoreFavIconNew1"></i>
+                                <i class="fa fa-heart-o customStoreFavIconNew"></i>
+                            </div>
+                            <p class="storeFavOptionTxt">Favorite</p>
+                        </div> 
+
+					</div>
+				</div>
+			</div>
+			
+	<div class="tabs">
+      <a class="tab-item">Location</a>
+      <a class="tab-item" ui-sref="deals.dealsNearYou" nav-transition="ios" nav-direction="forward">Deals</a>
+    </div>
+			
+		</div>
+		 <div ng-repeat="deal in dealsList" ui-sref="deals.details({dealId : deal.dealId})">
+			<ion-item class="item-icon-right redBg noPadding" ng-class="{active: isGroupShown(deal)}" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg">
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{deal.logoUrl}}" alt="" class="dealImgListing">
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleTxt">{{deal.name}}</p>
+					<p class="dealLocationTxt">{{deal.bDisplayName}}</p>
+					<p class="dealStoreTxt">Valid Till: {{deal.validTo}}</p>
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+			</ion-item>
+        </div>
+	</ion-content>
+</ion-view>
+ -->
+
+ <ion-view>
+	<!--<div class="tabCustomBar remove-tabs-top-spacing dealsTypeBarMain brandLevelTabs">
+			<div class="tabs">
+				<a class="tab-item" ui-sref="deals.brandLoc({'id':brand.bid})" nav-transition="ios" nav-direction="back">Location</a>
+				<a class="tab-item active">Deals</a>
+			</div>
+		</div>-->
+	<ion-content class="has-footer">
+		
+			<div class="favBrandInfo">
+				<div class="favBrandCoverPicInfo">
+					<img ng-src="{{::brand.imageUrl}}" alt="" class="favBrandCoverPicImg">
+					<div class="favBrandCoverOverlay">&nbsp;</div>
+				</div>
+				<div class="favBrandPicNinfo">
+					<div class="favBrandProfilePic">
+						<img ng-src="{{::brand.logoUrl}}" alt="" class="favBrandProfilePicImg">
+					</div>
+					<div class="favBrandInfoMain">
+						<p class="brandNameTxt">{{::brand.brandName}}</p>
+						           
+					<!--<div class="favBrandUnfavOptionMain">
+                            <div class="storeMakeFaveDiv">
+                                <input type="checkbox" class="hiddenCatCheckBox" id="checkbox" ng-value="store.mid" id="{{brand.mid}}" ng-model="brand.checked" ng-click="deselect($index, brand.checked)"/>
+                                <i class="fa fa-heart customStoreFavIconNew1"></i>
+                                <i class="fa fa-heart-o customStoreFavIconNew"></i>
+                            </div>
+                            <p class="storeFavOptionTxt">Favorite</p>
+                        </div>-->
+
+					</div>
+				</div>
+			</div>
+			<div ng-show="noDeals">
+				<div class="favStoresMain1">
+					<div class="noFavStoreFound">
+						<div class="nofavStoreImage">
+							<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+						</div>
+						<!-- <p class="noFavStoreHeading">You haven't saved any deals yet!</p> -->
+						<p class="noFavStoreTxt">We couldn't find any deals from this brand. We will notifiy you when deals are available</p>
+						<button class="button button-block button-assertive" ui-sref="deals.yourDeals">Go to Deals</button>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div ng-show="hasDeal">
+				<div class="postAdealHeading">
+					<p class="postAdealTxt">Your Favourite Brand Deals</p>
+				</div>
+
+				<div ng-repeat="brand in favBrands" ui-sref="deals.brandDealsDetails({'dealId': brand.dealId})">
+					<ion-item class="item item-avatar redBg storePadding" ng-class-even="'lightRedBg'">
+						<div class="dealImageNShadow">
+							<div class="dealShadowListing">
+								<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+							</div>
+							<div class="dealImageListing">
+								<img ng-src="{{::brand.logoUrl}}" alt="" class="dealImgListing" />
+							</div>
+						</div>
+						<div class="dealListingDetails favStoreDetails">
+							<p class="dealTitleTxt">{{::brand.name}}</p>
+							<p class="dealLocationTxt normal">Valid Till: {{::brand.validTo}}</p>
+							<p class="dealLocationTxt normal">{{::brand.locality}} <span ng-if="brand.locality && brand.distance">,</span> {{::brand.distance | number : 2}} <span ng-if="brand.distance">miles</span> </p>
+						</div>
+						<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow favBrandShadow" />
+					</ion-item>
+				</div>
+			</div>
+		<ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c">
+  		</ion-infinite-scroll>
+	</ion-content>
+	
+</ion-view>

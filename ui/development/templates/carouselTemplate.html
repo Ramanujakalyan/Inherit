@@ -1,0 +1,23 @@
+  
+	<ion-slide-box show-pager="true">
+        <ion-slide ng-repeat="carousel in carousels" on-swipe-right="getCarouselID()" on-swipe-left="getCarouselID()">
+			<div class="dealCarouselMain" ui-sref="deals.details({dealId : carousel.dealId})">
+				<div class="dealCarouselImageHolder">
+					<img ng-src="{{::carousel.imageUrl}}"  class="dealCarouselImg" alt="" />
+				</div>
+				<div class="dealCarouselContentHolder">
+					<div class="dealCarouselContentHolderInner">
+						<div class="dealCarouselContentStoreImage">
+							<img ng-src="{{::carousel.logoUrl}}"  class="dealCarouselContentStoreImg" alt="" />
+						</div>
+						<div class="dealCarouselContentStore">
+							<p class="dealCarouselContentTitle">{{::carousel.title}}</p>
+							<p class="dealCarouselContentStoreName">{{::carousel.bDisplayName}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </ion-slide>
+        </ion-slide-box>
+ 
+  

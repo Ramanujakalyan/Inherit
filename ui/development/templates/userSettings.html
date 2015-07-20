@@ -1,0 +1,79 @@
+<style>
+.toggle{float:right !important;margin:5px 2px -5px 0px;}
+.toggle .handle{width:22px !important;height:22px !important;}
+.toggle .track{width:48px !important;height:26px !important;}
+.bottomTabMain tabs-striped {display: none;}
+</style>
+ 
+<ion-view>
+	<div class="bar bar-header action-bar-gradient item-input-inset">
+		<img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="" ui-sref="deals.yourDeals" />
+		<h1 class="title"></h1>
+	</div>
+	<ion-content class="has-header">
+		<p class="manageDealsHeading">User Settings</p>	
+		<div class="userSettingsMain">
+			<div class="userSettingsMainInner">
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain">
+						<p class="userSettingsAccordianMaintxt">Notifications</p>
+
+						<label class="toggle toggle-assertive disable-user-behavior notification-bar"><input type="checkbox" ng-checked="true" ng-model="notification" class="ng-untouched ng-valid ng-dirty ng-valid-parse" ng-value="on" ng-change="notify(notification)"><div class="track"><div class="handle"></div></div></label>
+					</div>
+				</div>
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain" ng-click="catModal.show()">
+						<p class="userSettingsAccordianMaintxt">Change selected categories</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</div>
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain" ng-click="copyrightModal.show()">
+						<p class="userSettingsAccordianMaintxt">Copyright</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</div>
+				
+				<div class="connectYourFBAccount" ng-click="facebookLogin()" ng-show="loginFB">
+					<div class="connectYourFbTxtHolder" >
+						<p class="connectFbAccountTxt">Connect your Facebook Account</p>
+						<p class="earnKarmaPointsFbTxt">Earn 500 Karma points</p>
+					</div>
+					<i class="fa fa-facebook-square customConnectFacebookIcon"></i>
+				</div>
+				
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain" ng-click="termsModal.show()">
+						<p class="userSettingsAccordianMaintxt">Terms of use</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</div>
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain" ng-click="privacyModal.show()">
+						<p class="userSettingsAccordianMaintxt">Privacy Policy</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</div>
+				<div class="userSettingsAccordianSingle">
+					<div class="userSettingsAccordianMain" ng-click="disclaimerModal.show()">
+						<p class="userSettingsAccordianMaintxt">Disclaimer</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</div>
+				<a class="userSettingsAccordianSingle" href="mailto:appsupport@madzz.co.in">
+					<div class="userSettingsAccordianMain">
+						<p class="userSettingsAccordianMaintxt">Contact Us</p>
+						<i class="fa fa-chevron-right customAccordianSettingsIcon"></i>
+					</div>
+				</a> 
+
+				<div class="spreadMadzzLoveMain">
+					<div class="spreadMadzzLoveInner">
+						<img src="images/madzzConnectIcon.png" class="madzzSpreadLoveLogo" alt="" />
+					</div>
+					<p class="spreadLoveButton" ng-click="popover.show($event)">Spread the love of Madzz</p>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,83 @@
+<ion-view>
+	<div class="tabs-top tabCustomBar remove-tabs-top-spacing">
+		<div class="tabs">
+			  <a class="tab-item" ui-sref="deals.yourDeals">Recommended</a>
+			  <a class="tab-item" ui-sref="deals.popularDeals">Popular</a>
+			  <a class="tab-item active">Near Me</a>
+	   </div>
+	</div>
+<style>
+	.slider-pager{display:block !important;bottom: 9px !important;}
+</style>
+	<ion-content class="has-footer loadingBg">
+
+	<div class="dealsCrsl">
+  <div ng-include src="'templates/carouselTemplate.html'"></div>
+  </div>
+		<!-- <ion-slide-box class="dealsCrsl" show-pager="true">
+			<ion-slide ng-repeat="carousel in carousels" on-swipe-right="getCarouselID()" on-swipe-left="getCarouselID()">
+				<div class="dealCarouselMain" ui-sref="deals.details({dealId : carousel.dealId})">
+					<div class="dealCarouselImageHolder">
+						<img ng-src="{{::carousel.imageUrl}}" class="dealCarouselImg" alt="" />
+					</div>
+					<div class="dealCarouselContentHolder">
+						<div class="dealCarouselContentHolderInner">
+							<div class="dealCarouselContentStoreImage">
+								<img ng-src="{{::carousel.logoUrl}}" class="dealCarouselContentStoreImg" alt="" />
+							</div>
+							<div class="dealCarouselContentStore">
+								<p class="dealCarouselContentTitle">{{::carousel.title}}</p>
+								<p class="dealCarouselContentStoreName">{{::carousel.bDisplayName}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slide-box> -->
+		<div ng-show="noLocMsg">
+			<div class="favStoresMain">
+				<div class="noFavStoreFound">
+					<p class="noFavStoreHeading">Sorry! Couldn't Find You.</p>
+					
+					<!--<div class="nofavStoreImage">
+						<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+					</div>-->
+					
+					<p class="noFavStoreTxt">Turn on Location Services to help us find your location. Your location helps us serve you deals that are near you and relevant to you.<br /><br />
+					You can turn on location services by going to Settings > Location > Toggle the On/Off Button.<br /><br />
+					The navigation path may vary by device so please check your device manual for specific instructions.</p>
+				</div>
+			</div>
+		</div>
+
+		<div ng-if="deals == ''">
+			<div class="favStoresMain">
+				<div class="noFavStoreFound">
+					<p class="noFavStoreTxt">There are no Deals near you based on your selected categories to display here. Kindly check back soon. We add deals on a daily basis</p>
+				</div>
+			</div>
+		</div>
+
+		<div ng-include src="'templates/dealTemplate.html'"></div>
+		<!-- <div ng-repeat="deal in dealsNearYouList" ui-sref="deals.details({dealId : deal.dealId})" ng-click="getDealNearYouId()" in-view="$inview&&getInfo()">
+			<ion-item class="item item-avatar item-icon-right redBg noPadding" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{::deal.logoUrl}}" alt="" class="dealImgListing" />
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleTxt">{{::deal.title}}</p>
+					<p class="dealLocationTxt">{{::deal.bDisplayName}}</p>
+					<p class="dealStoreTxt">Valid Till: {{::deal.validTo}}</p>
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+			</ion-item>
+		</div> -->
+		<ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c">
+  	</ion-infinite-scroll> 
+	</ion-content>
+</ion-view>

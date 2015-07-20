@@ -1,0 +1,23 @@
+<ion-view><ion-content><style>
+
+.insta{
+  background:#ff0000;
+  width:70px;
+  height:80px;
+  margin-left: auto;
+  margin-right: 60%;
+  margin-top:20%;
+ 
+}
+.inst{
+  background:#ff0000;
+  content:Featured Store;
+   width:300px;
+  height:100px;
+  margin-top:10%;
+  margin-left:30%;
+  
+  margin-top:30%;
+}
+
+</style><div class="Act"><h1 align="center">You might like</h1></div><div class="insta"></div><div class="inst"></div></ion-content></ion-view>

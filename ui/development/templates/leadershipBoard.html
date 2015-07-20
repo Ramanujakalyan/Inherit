@@ -1,0 +1,23 @@
+<ion-view>
+<style>
+	.manageDealsHeading{float:none !important;}
+	.leadershipBoardMain{float:none !important;}
+</style>
+	<ion-content>
+		<p class="manageDealsHeading">Leader Board</p>
+		<div class="leadershipBoardMain">
+			<div class="leadershipSingleMain" ng-repeat="leader in leadershipBoardList">
+				<p class="leaderNumber">{{$index + 1}}</p>
+				<div class="leaderNameNimage">
+					<div class="leaderPhoto">
+						<img ng-src="{{leader.profileImageUrl}}" alt="" class="userProfilePicImg" />
+					</div>
+					
+					<p class="leaderNameTxt">{{leader.name}}</p>
+				</div>
+				<p class="leaderKarmaPoints">{{leader.karmaPoints}}</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,77 @@
+<ion-view>
+	
+<style>
+	.slider-pager{display:block !important;bottom: 9px !important;}
+</style>
+	<ion-content class="has-footer loadingBg">
+
+	<div ng-show="showDeals">
+  <div ng-include src="'templates/carouselTemplate.html'"></div>
+ </div>
+
+	 	<!-- <ion-slide-box show-pager="true">
+			<ion-slide ng-repeat="carousel in carouselFilter">
+				<div class="dealCarouselMain" ui-sref="deals.details({dealId : carousel.dealId})">
+					<div class="dealCarouselImageHolder">
+						<img ng-src="{{::carousel.imageUrl}}" class="dealCarouselImg" alt="" />
+					</div>
+					<div class="dealCarouselContentHolder">
+						<div class="dealCarouselContentHolderInner">
+							<div class="dealCarouselContentStoreImage">
+								<img ng-src="{{::carousel.logoUrl}}" class="dealCarouselContentStoreImg" alt="" />
+							</div>
+							<div class="dealCarouselContentStore">
+								<p class="dealCarouselContentTitle">{{::carousel.title}}</p>
+								<p class="dealCarouselContentStoreName">{{::carousel.bDisplayName}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ion-slide>
+		</ion-slide-box> -->
+		
+		<!-- <div ng-show="noLocMsg">
+			<div class="favStoresMain">
+				<div class="noFavStoreFound">
+					<p class="noFavStoreHeading">Sorry! Couldn't Find You.</p>
+					
+					
+					<p class="noFavStoreTxt">Turn on Location Services to help us find your location. Your location helps us serve you deals that are near you and relevant to you.<br /><br />
+					You can turn on location services by going to Settings > Location > Toggle the On/Off Button.<br /><br />
+					The navigation path may vary by device so please check your device manual for specific instructions.</p>
+				</div>
+			</div>
+		</div> -->
+		<div ng-show="showDeals">
+		<div ng-include src="'templates/dealTemplate.html'"></div>
+		</div>
+
+		<div ng-show="noDeals">
+<div class="nofavStoreImage">
+							<img src="images/couldntFindIcon.png" class="noFavStoreImg" alt="" />
+						</div>
+	<p class="noFavStoreTxt">There are no deals to display here. Please check back again soon. We add deals on a daily basis. </p>
+</div>
+		<!-- <div ng-repeat="deal in dealFilter" ui-sref="deals.details({dealId : deal.dealId})">
+			<ion-item class="item item-avatar item-icon-right redBg noPadding" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg" />
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{::deal.logoUrl}}" alt="" class="dealImgListing" />
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleTxt">{{::deal.title}}</p>
+					<p class="dealLocationTxt">{{::deal.bDisplayName}}</p>
+					<p class="dealStoreTxt">Valid Till: {{::deal.validTo}}</p>
+					<p class="dealLocationTxt">{{deal.locality}} <span ng-if="$scope.deal.locality == ''">,</span>{{deal.distance | number : 2}} miles</p> 
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+			</ion-item>
+		</div> -->
+		<ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="ion-loading-c">
+  	</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

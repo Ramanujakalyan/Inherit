@@ -1,0 +1,172 @@
+<style>
+	.buttontext {overflow: hidden;white-space: nowrap;display: block;text-overflow: ellipsis;}
+</style>
+<ion-view>
+    <div class="bar bar-header action-bar-gradient item-input-inset">
+		<img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="" ui-sref="deals.yourDeals" />
+    </div>
+    <ion-content class="has-header">
+    <div class="merchRegistrationMain">
+		<div class="userRegHeadingNbutton">
+			<p class="userRegistrationTxt">Business Sign Up</p>
+			<p class="signUpAsStoreButton" ui-sref="userReg">Sign Up as User</p>
+		</div>
+		<form novalidate name="mrchVld" ng-init="estBlur=false;dispNameBlur=false;emailBlur=false;phoneBlur=false;streetBlur=false;pinBlur=false;">
+			<div class="userSignUpMainBlock">
+				<div class="universalFormMain" style="margin-top:15px;">
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-building customUserNameIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+								<input type="text" required class="textBoxInput" ng-blur="estBlur=true" placeholder="Enter name of Establishment" name="name" ng-model="businessData.name" />
+								<b class="tooltip tooltip-bottom-right black">This is the legally registered name. For e.g: Summit PayCom Pvt Ltd</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && mrchVld.name.$error.required" class="help-block">Establishment Name Is Required.</p>
+					</div>
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-eye customPhoneNumIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+								<input type="text" ng-blur="dispNameBlur=true" required class="textBoxInput" placeholder="Enter Business Display name" name="displayName" ng-model="businessData.displayName" />
+								<b class="tooltip tooltip-bottom-right black">This is usually the name on your display boards. For e.g.: Summit</b>
+							</div>
+						</div>
+						<p ng-show="dispNameBlur && mrchVld.displayName.$error.required" class="help-block">Display Name Is Required.</p>
+					</div>
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-envelope customPhoneNumIconReg"></i>
+						    </div>
+							<div class="textBoxHolder">
+								<input type="email" ng-blur="emailBlur=true" class="textBoxInput" placeholder="Enter Business Email" ng-model="businessData.email" name="emailName">
+							</div>
+						</div>
+						<p ng-show="emailBlur && mrchVld.emailName.$error.email" class="help-block">Email is invalid</p>
+					</div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-phone customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<input type="number" required class="textBoxInput" ng-blur="phoneBlur=true" placeholder="Enter your Phone Number" name="phone" ng-model="businessData.phone" />
+						<b class="tooltip tooltip-bottom-right black">Phone number must be in 911234567890 format</b>
+					  </div>
+					</div>
+					<p ng-show="phoneBlur && mrchVld.phone.$error.required" class="help-block">Phone number is required.</p>
+				  </div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-road customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<input type="text" required class="textBoxInput" ng-blur="streetBlur=true" placeholder="Enter your Street Address" name="street" ng-model="businessData.street" />
+						<b class="tooltip tooltip-bottom-right black">For e.g.: 115 4th Main Road, 5th C Cross</b>
+					  </div>
+					</div>
+					<p ng-show="streetBlur && mrchVld.street.$error.required" class="help-block">Street number is required.</p>
+				  </div>
+				  <div class="formStep">
+					<div class="textAreaForm">
+					  <div class="textAreaIcon">
+						<i class="fa fa-thumb-tack customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textAreaHolder">
+						<ion-google-place placeholder="Enter Your Locality" ng-model="businessData.location" />
+					  </div>
+					</div>
+				  </div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-map-marker customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<input type="number" ng-blur="pinBlur=true" required class="textBoxInput" name="pincode" placeholder="Enter your Pincode" ng-model="businessData.pincode">
+					  </div>
+					</div>
+					<p ng-show="pinBlur && mrchVld.pincode.$error.required" class="help-block">Pincode is required.</p>
+				  </div>
+				  <div class="formStep">
+					<div class="atMyLocationCheck">
+						<input type="checkbox" class="hiddenCatCheckBox ng-valid ng-dirty ng-valid-parse ng-touched" ng-model="Wantsgecoding" ng-checked="checked" ng-change="getCord(Wantsgecoding)" value="on">
+					</div>
+					
+					<span class="amAtStore">I am NOW at the above Business address</span>
+					
+				  </div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-sitemap customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<!-- <input type="text" class="textBoxInput" placeholder="Select your categories" ng-click="modal.show()"> -->
+						<button class="textBoxInput" ng-click="catModal.show()"><span class="buttontext">{{catButton}}</span></button>
+					  </div>
+					</div>
+					<p ng-show="showCat" class="help-block">Select Atleast 1 Category</p>
+				  </div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-star customPhoneNumIconReg"></i>
+					  </div>
+					  <div class="textBoxHolder">
+						<button class="textBoxInput" ng-click="showBrandModal()"><span class="buttontext">{{brandButton}}</span></button>
+					  </div>
+					</div>
+					<p ng-show="showBrand" class="help-block">You have to Select Atleast 1 Brand</p>
+				  </div>
+				  <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-building customPhoneNumIconReg"></i>
+					  </div>
+					  <div class="textBoxHolder">
+						<button class="textBoxInput" ng-click="mallsModal.show()">{{mallButton}}</button>
+					  </div>
+					</div>
+					<p ng-show="showMall" class="help-block">You have to Select a Mall</p>
+				  </div>
+				  
+				  <div class="formStep">
+					<div class="addPhotoOrTakeContainer">
+					  <div class="addPhotoOrTakeInner">
+
+						<div class="addPhotoPostDeal">
+							<span class="s3uploadButton" s3-upload bucket="'madzz-dev-bucket'" ng-model="files.first" s3-upload-options="{getOptionsUri: 'http://madzztest1-env.elasticbeanstalk.com/rest/awsS3AuthAccess'}"  ></span>
+							<img ng-src="{{files.first}}" width="120" height="120">
+							<div class="addPhotoPostDealInner">
+								<i class="fa fa-photo customAddPhotoIcon"></i>
+								<p class="addOrTakePhotoTxt">Add Photo</p>
+							</div>
+
+						</div>
+					</div>
+				  </div>
+				  <p class="help-block">Upload Govt. Reg. Form</p>
+			      <p ng-show="showImg" class="help-block">Pls Upload Govt. Reg. Form</p>
+				  </div>
+				 <div class="formStep">
+					<input type="submit" class="buttonForm fright" value="Submit" ng-click="submitData(businessData, mrchVld.$valid)" />
+				 </div>
+				</div>
+			<div class="clear"></div>
+		  </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<div style="height: 200px; background-color: grey">
+<h4><center>Card Deals</center></h4>
+<p>TODO : Card Deals-This is a Corousel</p>
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div><h2><center>HDFC Card</h2></center></div>
+    <p>This is HDFC Card, Interest Free EMI Available</p>
+  </ion-slide>
+  <ion-slide>
+    <div><h2><center>SBI Card</h2></center></div>
+    <p>This is SBI Card, Low Interest Rate EMI Available</p>
+  </ion-slide>
+  <ion-slide>
+    <div><h2><center>HSBC Bank</h2></center></div>
+    <p>This is HSBC Card, get points for every purchase</p>
+  </ion-slide>
+</ion-slide-box>
+
+</div>
+<hr style="width: 100%;"/>

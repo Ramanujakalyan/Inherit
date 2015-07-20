@@ -1,0 +1,11 @@
+<style>
+	.buttontext {overflow: hidden;white-space: nowrap;display: block;text-overflow: ellipsis;}
+</style>
+<ion-view>
+<div class="bar bar-header action-bar-gradient item-input-inset">
+<img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="" ui-sref="deals.yourDeals">
+</div>
+<ion-content class="has-header">
+<div class="merchRegistrationMain">
+<div class="userRegHeadingNbutton">
+

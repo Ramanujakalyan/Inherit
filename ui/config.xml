@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.madzz" version="1.0.1" android-versionCode="3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>madzz</name>
+  <description>
+        Deals Around You
+    </description>
+  <author email="appsupport@madzz.co.in" href="http://www.madzz.co.in">
+      Madzz Support
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <access origin="tel:*" launch-external="yes"/>
+  <access origin="mailto:*" launch-external="yes"/>
+	<preference name="SplashScreen" value="screen"/>
+<preference name="SplashScreenDelay" value="10000" />
+<preference name="AutoHideSplashScreen" value="false" />
+<preference name="orientation" value="portrait"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>

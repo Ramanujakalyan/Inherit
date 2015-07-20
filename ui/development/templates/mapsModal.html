@@ -1,0 +1,10 @@
+<div class="modal" style="height: 100%;">
+<div class="bar bar-header action-bar-gradient item-input-inset"><img src="images/actionLogo1.png" class="actionBarLogoHdpi1" alt="">
+  
+  <h1 class="title mapViewHeading">Map View</h1>
+  <p class="backButtonMapView" ng-click="modal.hide()">Back</p>
+</div>
+ <map ng-transclude scroll="false" data-tap-disabled="true" lat="{{mapLat}}" lng="{{mapLng}}" latLngMarkers="{{latLngJson}}" map-latitude="latitud" map-longitude="longitud" style="width: 100%;height: 100%;display: block;">
+ 	
+ </map>
+</div>

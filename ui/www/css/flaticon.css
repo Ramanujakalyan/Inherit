@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/flaticon.eot");
+	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.woff") format("woff"),
+	url("../fonts/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 30px;
+font-style: normal;
+}.flaticon-black170:before {
+	content: "\e000";
+}
+.flaticon-boy21:before {
+	content: "\e001";
+}
+.flaticon-burger4:before {
+	content: "\e002";
+}
+.flaticon-car152:before {
+	content: "\e003";
+}
+.flaticon-coconut8:before {
+	content: "\e004";
+}
+.flaticon-diamond36:before {
+	content: "\e005";
+}
+.flaticon-heart27:before {
+	content: "\e006";
+}
+.flaticon-home118:before {
+	content: "\e007";
+}
+.flaticon-jacket2:before {
+	content: "\e008";
+}
+.flaticon-kitchen56:before {
+	content: "\e009";
+}
+.flaticon-military5:before {
+	content: "\e00a";
+}
+.flaticon-shopping34:before {
+	content: "\e00b";
+}
+.flaticon-television4:before {
+	content: "\e00c";
+}
+.flaticon-traveler:before {
+	content: "\e00d";
+}
+.flaticon-washing11:before {
+	content: "\e00e";
+}
+.flaticon-woman55:before {
+	content: "\e00f";
+}

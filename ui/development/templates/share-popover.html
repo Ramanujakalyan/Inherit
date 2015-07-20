@@ -1,0 +1,29 @@
+<ion-popover-view>
+<style>
+.shareIcons{color:#525252 !important;font-size:2em !important;position: absolute !important;left: 11px !important;}
+.shareFacebookIcons{color:#525252 !important;font-size:2em !important;position: absolute !important;left: 17px !important;}
+.shareTwitterIcons{color:#525252 !important;font-size:2em !important;position: absolute !important;left: 11px !important;top:11px !important;}
+.shareWhatsappIcons{color:#525252 !important;font-size:2em !important;position: absolute !important;left: 11px !important;top:11px !important;}
+.sharePopTxt{color:#525252 !important;font-size:1em !important;}
+</style>
+	<ion-content>
+		<div class="list">
+			<a class="item item-icon-left" ng-click="hello('facebook')">
+				<i class="fa fa-facebook placeholder-icon shareFacebookIcons"></i>
+				<span class="sharePopTxt">Facebook</span>
+			</a>
+			<a class="item item-icon-left" ng-click="hello('twitter')" >
+				<i class="fa fa-twitter placeholder-icon shareTwitterIcons"></i>
+				<span class="sharePopTxt">Twitter</span>
+			</a>
+			<a class="item item-icon-left" ng-click="hello('whatsApp')">
+				<i class="fa fa-whatsapp placeholder-icon shareWhatsappIcons"></i>
+				<span class="sharePopTxt">WhatsApp</span>
+			</a>
+			<a class="item item-icon-left" ng-click="hello('hangouts')">
+				<i class="icon ion-android-chat placeholder-icon shareIcons"></i>
+				<span class="sharePopTxt">Hangouts</span>
+			</a>
+		</div>
+	</ion-content>
+</ion-popover-view>

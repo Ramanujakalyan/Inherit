@@ -1,0 +1,38 @@
+<ion-view>
+	
+	<div class="bar bar-header action-bar-gradient item-input-inset">
+    <img src="images/actionLogo1.png" class="actionBarLogoHdpi" alt="" ui-sref="deals.yourDeals" />
+    <form ng-submit="search(searchText)" class="dealForm">
+    <label class="item-input-wrapper headerBarLabel">
+        <input type="search" placeholder="Search" class="inputBar" ng-model="searchText" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'"> <i class="icon ion-ios7-search placeholder-icon inputSearchIcon" ng-click="search(searchText)"></i>
+    </label>
+    </form>
+    <button class="button marginButton" ui-sref="deals.yourDeals">Back</button>
+</div>
+<ion-content class="has-header loadingBg">
+<p class="searchResultHeading">{{mymsg}}</p>
+
+<div ng-include src="'templates/dealTemplate.html'"></div>
+
+		<!--<div ng-repeat="deal in searchResult" ui-sref="deals.details({dealId : deal.dealId})">
+			<ion-item class="item item-avatar item-icon-right redBg noPadding" ng-click="toggleGroup(deal)" ng-class="{active: isGroupShown(deal)}" ng-class-even="'lightRedBg'">
+				<div class="dealImageNShadow">
+					<div class="dealShadowListing">
+						<img ng-src="images/dealShadowImg.png" alt="" class="dealShadowImg">
+					</div>
+					<div class="dealImageListing">
+						<img ng-src="{{deal.logoUrl}}" alt="" class="dealImgListing">
+					</div>
+				</div>
+				<div class="dealListingDetails">
+					<p class="dealTitleTxt">{{deal.title}}</p>
+					<p class="dealLocationTxt">{{deal.bDisplayName}}</p>
+					<p class="dealStoreTxt">Valid Till: {{deal.validTo}}</p>
+				</div>
+				<img ng-src="images/dealListingArrow.png" alt="" class="dealListingArrow" />
+			</ion-item>
+		</div>-->
+		<ion-infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded" distance="1%" icon="" >
+  		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

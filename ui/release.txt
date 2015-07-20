@@ -1,0 +1,19 @@
+Steps for Creating Signed APK
+
+
+1. cordova build --release android
+
+2. keytool -genkey -v -keystore madzz-release-key.keystore -alias madzz -keyalg RSA -keysize 2048 -validity 10000
+
+change the cordova release-unsigned apk to Madzz-release-unsigned.apk 
+3. jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore madzz-release-key.keystore platforms/android/ant-build/Madzz-release-unsigned.apk madzz
+
+Give path of zipalign
+
+4. /home/siddharth/Downloads/adt-bundle-linux/sdk/build-tools/21.1.2/zipalign -v 4 platforms/android/ant-build/Madzz-release-unsigned.apk Madzz_X86.apk
+
+
+
+To generate facbook hash key
+
+keytool -exportcert -alias madzz -keystore madzz-release-key.keystore | openssl sha1 -binary | openssl base64

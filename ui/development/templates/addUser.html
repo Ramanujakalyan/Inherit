@@ -1,0 +1,148 @@
+
+<ion-view>
+  <ion-content class="has-footer">
+
+
+
+<form novalidate name="mrchVld" ng-init="estBlur=false;dispNameBlur=false;emailBlur=false;phoneBlur=false;streetBlur=false;pinBlur=false;">
+			<div class="userSignUpMainBlock">
+				<div class="universalFormMain" style="margin-top:15px;">	  
+
+                                <div class="formStep">
+					<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-sitemap customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<!-- <input type="text" class="textBoxInput" placeholder="SELECT USER TYPE" ng-click="modal.show()"> -->
+						<button class="textBoxInput" ng-click="userType1()"><span class="buttontext">{{catButton}}</span></button>
+					  </div>
+					</div>
+					<p ng-show="showCat" class="help-block">Select User Type</p>
+				  </div> </div> </div> </div> </div>
+
+
+				<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-building customUserNameIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+					<input type="text" required class="textBoxInput" ng-blur="estBlur=true" placeholder="Username" name="name" ng-model="Username" />
+							<b class="tooltip tooltip-bottom-right black">Enter your username</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && pswdVld.name.$error.required" class="help-block">Username Is Required.</p>
+					</div>
+
+
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-building customUserNameIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+				<input type="text" required class="textBoxInput" ng-blur="estBlur=true" placeholder="someone@example.com" name="name" ng-model="email" />
+							<b class="tooltip tooltip-bottom-right black">Enter the Valid email id eg: someone@example.com</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && pswdVld.name.$error.required" class="help-block">Emailid Is Required.</p>
+					</div>
+
+
+
+
+
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-building customUserNameIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+				<input type="password" required class="textBoxInput" ng-blur="estBlur=true" placeholder="Password" name="password" ng-model="password" />
+							<b class="tooltip tooltip-bottom-right black">Enter your password</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && pswdVld.name.$error.required" class="help-block">password Is Required.</p>
+					</div>
+
+
+
+
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+								<i class="fa fa-building customUserNameIconReg"></i>
+							</div>
+							<div class="textBoxHolder">
+			<input type="password" required class="textBoxInput" ng-blur="estBlur=true" placeholder="Re-Enter Password" name="Repassword" ng-model="Repassword" />
+							<b class="tooltip tooltip-bottom-right black">Re-Enter your password</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && pswdVld.name.$error.required" class="help-block">password Is Required.</p>
+					</div>
+	  
+					<div class="formStep">
+						<div class="textBoxForm">
+							<div class="textBoxIcon">
+                                                                <i class="fa fa-eye customPhoneNumIconReg"></i>
+								
+							</div>
+							<div class="textBoxHolder">
+				<input type="number" required class="textBoxInput" ng-blur="estBlur=true" placeholder="Phone Number" name="phone" ng-model="phone" />
+							<b class="tooltip tooltip-bottom-right black">Enter your number for eg: 9xxxxxxxxx</b>
+							</div>
+						</div>
+						<p ng-show="estBlur && pswdVld.name.$error.required" class="help-block">Phone number Is Required.</p>
+					</div>
+
+	 
+
+
+                            <div class="formStep">       
+                                        <div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-sitemap customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<!-- <input type="text" class="textBoxInput" placeholder="Select Location" ng-click="modal.show()"> -->
+						<button class="textBoxInput" ng-click="showCity()"><span class="buttontext">{{catButton}}</span></button>
+				  </div>
+					</div>
+					<p ng-show="showCat" class="help-block">Select Atleast 1 Location</p>
+				  </div>
+
+
+
+			<div class="formStep">
+				<div class="textBoxForm">
+					  <div class="textBoxIcon">
+						<i class="fa fa-sitemap customPhoneNumIconReg">
+						</i>
+					  </div>
+					  <div class="textBoxHolder">
+						<!-- <input type="text" class="textBoxInput" placeholder="Select Locality" ng-click="modal.show()"> -->
+						<button class="textBoxInput" ng-click="showLocality()"><span class="buttontext">{{catButton}}</span></button>
+				  </div>
+					</div>
+					<p ng-show="showCat" class="help-block">Select Atleast 1 Locality</p>
+				  </div>
+
+
+
+                     <div class="formStep">
+					<input type="submit" class="buttonForm fright" value="ADD USER" ng-click="submitData(email, pswdVld.$valid)" />
+				 </div>
+				</div>
+			<div class="clear"></div>
+		  </div>
+      </form>
+    </div>
+	 
+	 
+ </form>
+    </div>
+  </ion-content>
+</ion-view>
